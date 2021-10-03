@@ -6,3 +6,5 @@ export const newDietIDSelector = createSelector(
   mainSelector,
   (state) => state.newDietID
 );
+
+export const adminAccessSelector = createSelector(mainSelector, state => state.adminAccess)

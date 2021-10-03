@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: MainSlice = {
   newDietID: "",
+  adminAccess: true,
 };
 
 export const mainSlice = createSlice({
@@ -14,9 +15,15 @@ export const mainSlice = createSlice({
         newDietID: action.payload,
       };
     },
+    setAdminAccessybility: (state, action) => {
+      return {
+        ...state,
+        adminAccess: action.payload
+      }
+    }
   },
 });
 
-export const { setNewDietId } = mainSlice.actions;
+export const { setNewDietId, setAdminAccessybility } = mainSlice.actions;
 
 export default mainSlice.reducer;
