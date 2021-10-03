@@ -1,0 +1,57 @@
+.admin_operations_containers{
+    display: flex;
+    justify-content: center;
+}
+.admin_operations_containers_add_role{
+    margin-top: 80px;
+}
+.admin_main{
+    height: 100vh;
+    background-color:#330033;
+}
+.add_user_container{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.add_block{
+    display: grid;
+}
+.add_label{
+    color: wheat;
+    font-size: 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.add_input{
+    font-size: 20px;
+    padding: 25px;
+}
+.add_header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ff9966;
+    font-size: 45px;
+    text-decoration: underline;
+}
+.admin_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    font-size: 35px;
+    color: #ff9966;    
+}
+.admin_button>div{
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    border: 2px solid red;
+}
+.admin_button>div:hover{
+    background-color: white;
+    color: red;
+    transition: 1s;
+}

@@ -1,11 +1,13 @@
 import React from 'react';
+import { BrowserRouter } from "react-router-dom";
 import './App.css';
+import { Routes } from './routes';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <div>
-      START
-    </div>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
