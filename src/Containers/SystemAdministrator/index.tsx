@@ -13,14 +13,14 @@ export const SystemAdministrator: React.FC = () => {
 
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     const adminAccessPassword = prompt('Please type Admin Password')
-    //     if (adminAccessPassword === ADMIN_PASSWORD) {
-    //         setAdminAccess(true)
-    //     } else {
-    //         dispatch(setAdminAccessybility(false))
-    //     }
-    // }, [dispatch])
+    useEffect(() => {
+        const adminAccessPassword = prompt('Please type Admin Password')
+        if (adminAccessPassword === ADMIN_PASSWORD) {
+            setAdminAccess(true)
+        } else {
+            dispatch(setAdminAccessybility(false))
+        }
+    }, [dispatch])
 
     const addUserEvent = (e: ChangeEvent<HTMLInputElement>) => {
         setAddUser({
