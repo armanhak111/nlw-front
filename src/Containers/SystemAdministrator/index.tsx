@@ -10,17 +10,17 @@ export const SystemAdministrator: React.FC = () => {
     const [addDiet, setAddDiet] = useState<object>({})
     const [currentUser, setCurrentUser] = useState<object>({})
     const [deleteUser, setDeleteUser] = useState<object>({})
-
+    //USee methods
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     const adminAccessPassword = prompt('Please type Admin Password')
-    //     if (adminAccessPassword === ADMIN_PASSWORD) {
-    //         setAdminAccess(true)
-    //     } else {
-    //         dispatch(setAdminAccessybility(false))
-    //     }
-    // }, [dispatch])
+    useEffect(() => {
+        const adminAccessPassword = prompt('Please type Admin Password')
+        if (adminAccessPassword === ADMIN_PASSWORD) {
+            setAdminAccess(true)
+        } else {
+            dispatch(setAdminAccessybility(false))
+        }
+    }, [dispatch])
 
     const addUserEvent = (e: ChangeEvent<HTMLInputElement>) => {
         setAddUser({
