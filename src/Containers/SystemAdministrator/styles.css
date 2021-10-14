@@ -6,7 +6,7 @@
     margin-top: 80px;
 }
 .admin_main{
-    height: 100vh;
+    height: 100%;
     background-color:#330033;
 }
 .add_user_container{
@@ -24,15 +24,15 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .add_input{
-    font-size: 20px;
-    padding: 25px;
+    font-size: 15px;
+    padding: 15px;
 }
 .add_header{
     width: 100%;
     display: flex;
     justify-content: center;
     color: #ff9966;
-    font-size: 45px;
+    font-size: 35px;
     text-decoration: underline;
 }
 .admin_button{
@@ -53,5 +53,23 @@
 .admin_button>div:hover{
     background-color: white;
     color: red;
+    transition: 1s;
+}
+.getAllContainer{
+    display: flex;
+    justify-content: center;
+}
+.getAll{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: blue;
+    border: 2px solid blue;
+    padding: 10px;
+    cursor: pointer;
+}
+.getAll:hover{
+    background-color: wheat;
     transition: 1s;
 }

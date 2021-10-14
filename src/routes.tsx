@@ -5,7 +5,6 @@ import { SystemAdministrator } from './Containers/SystemAdministrator';
 import { adminAccessSelector } from './store/selector';
 import { ROUTES } from './Utils/constants';
 
-
 export const Routes: React.FC = () => {
     const adminAccess = useSelector(adminAccessSelector)
     return (
