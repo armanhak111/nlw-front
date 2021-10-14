@@ -10,7 +10,7 @@ export const SystemAdministrator: React.FC = () => {
     const [addDiet, setAddDiet] = useState<object>({})
     const [currentUser, setCurrentUser] = useState<object>({})
     const [deleteUser, setDeleteUser] = useState<object>({})
-
+    //USee methods
     const dispatch = useDispatch()
 
     useEffect(() => {
