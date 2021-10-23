@@ -8,3 +8,5 @@ export const newDietIDSelector = createSelector(
 );
 
 export const adminAccessSelector = createSelector(mainSelector, state => state.adminAccess)
+
+export const modalOpenSelector = createSelector(mainSelector, state => state.isModalOpen)
