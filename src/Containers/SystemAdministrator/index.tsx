@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setAdminAccessybility } from '../../store/slice';
+import { createNewUser, setAdminAccessybility } from '../../store/slice';
 import { ADMIN_PASSWORD } from '../../Utils/constants';
 import './styles.css'
 
@@ -10,7 +10,7 @@ export const SystemAdministrator: React.FC = () => {
     const [addDiet, setAddDiet] = useState<object>({})
     const [currentUser, setCurrentUser] = useState<object>({})
     const [deleteUser, setDeleteUser] = useState<object>({})
-    //USee methods
+    
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -51,6 +51,7 @@ export const SystemAdministrator: React.FC = () => {
     }
 
     const createUser = () => {
+        dispatch(createNewUser(addUser))
         console.log(addUser)
     }
     const addUserDiet = () => {
@@ -84,7 +85,7 @@ export const SystemAdministrator: React.FC = () => {
                     </div>
                     <div className='add_block'>
                         <label className='add_label'>Diet ID</label>
-                        <input onChange={addUserEvent} className='add_input' type='text' name='id' />
+                        <input onChange={addUserEvent} className='add_input' type='text' name='dietId' />
                     </div>
                     <div className='add_block'>
                         <label className='add_label'>Date</label>

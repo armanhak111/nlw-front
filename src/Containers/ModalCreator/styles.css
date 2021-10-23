@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  background: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  width: 688px;
+  background: #221651;
+  height: 613px;
+}
+
+.myoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(px)
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+.modalContainer{
+  padding: 30px;
+}
+
+.success{
+  display: flex;
+  justify-content: center;
+}
+
+.generateUniquieIdText {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+   font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.generateUniquieIdText::after {
+  content : "";
+  position : absolute;
+  top: 38px;
+  width : 70%;
+  opacity: 0.5;
+  height : 1px;
+  background-color: #F8F8F8;
+  bottom: 0;
+}  
+
+.afterPaymentShowDietText {
+  display: flex;
+  margin-top: 54px;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+
+.checkYourEmailText {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 68px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #F8F8F8;
+}
+.succesModalButtonContainer{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+}
+.secondaryButton {
+  border: 2px solid rgba(63, 131, 233, 1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 204px;
+  height: 58px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #F8F8F8;
+}
+
+.primaryButton {
+  background: #3F83E9;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 204px;
+  height: 58px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #F8F8F8;
+}
+.primaryButton:hover{
+  transition: 0.5s;
+  border: 3px solid rgba(49, 214, 224, 0.3);
+  background: rgba(63, 131, 233, 0.3);
+}
+.secondaryButton:hover{
+  transition: 0.5s;
+  border: 3px solid rgba(49, 214, 224, 0.3);
+  background: rgba(63, 131, 233, 0.3);
+}
+
+.infoModal{
+  font-size: 18px;
+  color: white;
+  padding: 45px;
+}
+.ok{
+  position: absolute;
+  bottom: 0;
+  background: #3F83E9;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 204px;
+  height: 58px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #F8F8F8;
+}
