@@ -52,7 +52,55 @@ export const createNewUser = (data: { email?: string, dietId?: string, date?: st
         ))
       }
     })
+}
 
+export const getCurrentUserRequestAction = (dietId : string) => (dispatch: any) => {
+  axios.get(`${api}/users/${dietId}`)
+    .then((response: any) => {
+      if (response.status === 200) {
+        dispatch(setModalOpenAction(
+          {
+            status: true,
+            type: ModalTypes.info,
+            message: JSON.stringify(response.data[0]),
+          }
+        ))
+      }
+    })
+}
+
+export const deleteCurrentUserAction = (dietId : string) => (dispatch: any) => {
+  axios.delete(`${api}/users/${dietId}`)
+    .then((response: any) => {
+      if (response.status === 200) {
+        dispatch(setModalOpenAction(
+          {
+            status: true,
+            type: ModalTypes.info,
+            message: response.data.message,
+          }
+        ))
+      }
+    })
+}
+
+export const addDietRequestAction = (data: { dietId?: string, count?: number}) => (dispatch: any) => {
+  axios.put(`${api}/users`, JSON.stringify(data), {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then((response: any) => {
+      if (response.status === 200) {
+        dispatch(setModalOpenAction(
+          {
+            status: true,
+            type: ModalTypes.info,
+            message: response.data.message
+          }
+        ))
+      }
+    })
 }
 
 export const { setNewDietId, setAdminAccessybility, setModalOpenAction } = mainSlice.actions;

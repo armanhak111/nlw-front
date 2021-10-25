@@ -1,15 +1,15 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createNewUser, setAdminAccessybility } from '../../store/slice';
+import { addDietRequestAction, createNewUser, deleteCurrentUserAction, getCurrentUserRequestAction, setAdminAccessybility } from '../../store/slice';
 import { ADMIN_PASSWORD } from '../../Utils/constants';
 import './styles.css'
 
 export const SystemAdministrator: React.FC = () => {
     const [adminAccess, setAdminAccess] = useState<boolean>(true)
     const [addUser, setAddUser] = useState<object>({})
-    const [addDiet, setAddDiet] = useState<object>({})
-    const [currentUser, setCurrentUser] = useState<object>({})
-    const [deleteUser, setDeleteUser] = useState<object>({})
+    const [addDiet, setAddDiet] = useState<{id: string, count: number}>({id: '', count: 0})
+    const [currentUser, setCurrentUser] = useState<{id: ''}>({id: ''})
+    const [deleteUser, setDeleteUser] = useState<{id: string}>({id: "tortila1" })
     
     const dispatch = useDispatch()
 
@@ -52,15 +52,20 @@ export const SystemAdministrator: React.FC = () => {
 
     const createUser = () => {
         dispatch(createNewUser(addUser))
-        console.log(addUser)
     }
     const addUserDiet = () => {
-        console.log(addDiet)
+        const newDietParams = {
+            dietId: addDiet.id,
+            count: Number(addDiet.count)
+        }
+        dispatch(addDietRequestAction(newDietParams))
+        console.log(newDietParams)
     }
     const getCurrentUserRequest = () => {
-        console.log(currentUser)
+        dispatch(getCurrentUserRequestAction(currentUser.id))
     }
     const getDeleteUserRequest = () => {
+        dispatch(deleteCurrentUserAction(deleteUser.id))
         console.log(deleteUser)
     }
     const getAllRequest = () => {
@@ -109,7 +114,7 @@ export const SystemAdministrator: React.FC = () => {
                     </div>
                     <div className='add_block'>
                         <label className='add_label'>Current Diet</label>
-                        <input onChange={addDietEvent} className='add_input' type='text' name='current_diet' />
+                        <input onChange={addDietEvent} className='add_input' type='number' name='count' />
                     </div>
                 </div>
             </div>
