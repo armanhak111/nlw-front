@@ -1,0 +1,26 @@
+.currentItem{
+    display: table-cell;
+    vertical-align: middle;
+}
+.getQuote{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 214px;
+    height: 58px;
+    border-radius: 10px;
+    border: 1px solid rgba(49, 214, 224, 1);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    color: #F8F8F8;
+    transition: 1s;
+}
+.getQuote:hover {
+    background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.3) 0.44%, rgba(49, 214, 224, 0.3) 99.61%);
+    transform: scale(1.05);
+}
