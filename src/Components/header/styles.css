@@ -6,7 +6,7 @@
     justify-content: space-around;
 }
 .menuItems{
-    width: 400px;
+    width: 480px;
     display: flex;
     justify-content: space-around;
 }
@@ -26,8 +26,16 @@
 .classicItem{
     display: table-cell;
     vertical-align: middle;
-    transition: 0.3s;
+    transition: 0.2s;
+}
+.classicItem > p{
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    border-bottom: 0px;
 }
 .classicItem:hover{
     color: rgba(49, 214, 224, 1);
+}
+.classicItem > p:hover{
+    border-bottom: 1px solid rgba(49, 214, 224, 1);
 }

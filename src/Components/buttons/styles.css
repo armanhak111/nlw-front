@@ -2,7 +2,7 @@
     display: table-cell;
     vertical-align: middle;
 }
-.getQuote{
+.getQuotePassive{
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -20,7 +20,29 @@
     color: #F8F8F8;
     transition: 1s;
 }
-.getQuote:hover {
+.getQuoteActive{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 214px;
+    height: 58px;
+    background: linear-gradient(94.18deg, #3F83E9 0.44%, #31D6E0 99.61%);
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    color: #F8F8F8;
+    transition: 1s;
+}
+.getQuotePassive:hover {
+    background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.3) 0.44%, rgba(49, 214, 224, 0.3) 99.61%);
+    transform: scale(1.05);
+}
+.getQuoteActive:hover {
     background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.3) 0.44%, rgba(49, 214, 224, 0.3) 99.61%);
     transform: scale(1.05);
 }

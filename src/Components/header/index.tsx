@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css'
 import Logo from '../../assets/images/logo.png'
-import { GetQuoteButton } from '../buttons/getquote';
+import { GetQuotePassiveButton } from '../buttons/getquote';
 
 const Header: React.FC = () => {
     return (
@@ -12,17 +12,17 @@ const Header: React.FC = () => {
             <div className='menuItems'>
                 <div className='menuItemContainer'>
                     <div className='classicItem'>
-                        Profile
+                        <p>Profile</p>
                     </div>
                 </div>
                 <div className='menuItemContainer'>
                     <div className='classicItem'>
-                        Contact Us
+                        <p>Contact Us</p>
                     </div>
                 </div>
                 <div className='menuItemContainer'>
                     <div className='getQuoteContainer'>
-                        <GetQuoteButton />
+                        <GetQuotePassiveButton />
                     </div>
                 </div>
             </div>
