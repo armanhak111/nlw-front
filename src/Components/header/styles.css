@@ -1,0 +1,41 @@
+.headerContainer{
+    width: 100%;
+    background: rgba(4, 3, 47, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-around;
+}
+.menuItems{
+    width: 480px;
+    display: flex;
+    justify-content: space-around;
+}
+.menuItemContainer{
+    cursor: pointer;
+    display: table;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
+}
+.getQuoteContainer{
+    display: table-cell;
+    vertical-align: middle;
+}
+.classicItem{
+    display: table-cell;
+    vertical-align: middle;
+    transition: 0.2s;
+}
+.classicItem > p{
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    border-bottom: 0px;
+}
+.classicItem:hover{
+    color: rgba(49, 214, 224, 1);
+}
+.classicItem > p:hover{
+    border-bottom: 1px solid rgba(49, 214, 224, 1);
+}

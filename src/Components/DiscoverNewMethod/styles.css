@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+.dietPlanImg{
+    width: 743px;
+    height: 680.95px;
+}
+.discoverNewMethodContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.newMethodTextAndGet{
+    padding: 100px;
+    display: grid;
+}
+.newMethodHeader{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 76px;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
+}
+.newMethodText{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
+    opacity: 0.85;
+}
