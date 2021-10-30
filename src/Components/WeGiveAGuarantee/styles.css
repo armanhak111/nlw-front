@@ -1,35 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
 
-.dietPlanImg{
-    margin-right: 10px;
-    width: 713px;
-    height: 650.95px;
-}
-.discoverNewMethodContainer{
+.weGiceAGuaranteeContainer{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 55px;
 }
-.newMethodTextAndGet{
-    padding: 100px;
-    display: grid;
+.guaranteeContainer{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    align-items: center;
 }
-.newMethodHeader{
+.headerGuarantee{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 59px;
+    font-size: 48px;
     line-height: 76px;
     letter-spacing: 0.02em;
     color: #FDFDFD;
 }
-.newMethodText{
+.guaranteeText{
     font-family: 'Poppins', sans-serif;
-    width: 78%;
     font-style: normal;
+    width: 80%;
     font-weight: normal;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 37px;
     letter-spacing: 0.02em;
     color: #FDFDFD;
     opacity: 0.85;
 }
+.vitaminImage > img {
+    width: 820px;
+    height: 820px;
+}
+
