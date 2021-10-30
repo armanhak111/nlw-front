@@ -1,0 +1,11 @@
+.aboutPaymentContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutPayment{
+    width: 1168px;
+    height: 94px;
+    background: rgba(34, 22, 81, 0.6);
+    border-radius: 10px;
+}

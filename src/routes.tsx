@@ -9,7 +9,7 @@ import { ROUTES } from './Utils/constants';
 
 export const Routes: React.FC = () => {
     const adminAccess = useSelector(adminAccessSelector)
-
+    
     return (
         <div>
             <ModalCreator type='success'/>
