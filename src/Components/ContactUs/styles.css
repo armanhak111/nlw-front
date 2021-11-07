@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
 
 .contactUsMainContainer{
     display: flex;
@@ -26,3 +26,86 @@
     text-align: center;
     color: #F8F8F8;
 }
+
+.textCustomField > div::after{
+    border-bottom: 1px solid rgb(248, 248, 248,0.5);
+    width: 420px;
+}
+.textCustomField > label {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 15px;
+    color: #F8F8F8 !important;
+    opacity: 0.8;
+}
+.textCustomField > div > input {
+    font-family: 'Montserrat', sans-serif;
+    color: #F8F8F8 !important;
+    width: 20em;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+.credentials{
+    width: 50%;
+}
+.field{
+    margin-top: 30px;
+}
+.messageCustomField > div{
+    margin-top: 10px;
+    width: 420px;
+    height: 184px;
+    opacity: 0.5;
+    border: 1px solid #F8F8F8;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.messageCustomField > label {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: #F8F8F8 !important;
+    opacity: 0.8;
+    height: 20px !important;
+}
+.messageCustomField > div > textarea {
+    font-family: 'Montserrat', sans-serif;
+    color: #F8F8F8 !important;
+}
+
+.messageCustomField > div > textarea {
+    height: 100%;
+}
+
+.messageCustomField > div > textarea{
+	overflow: auto;
+	overflow-x: hidden;
+}
+.messageCustomField > div > textarea::-webkit-scrollbar-track{
+	background-color: rgba(196, 196, 196, 0.34);
+}
+
+.messageCustomField > div > textarea::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(196, 196, 196, 0.34);
+}
+.messageCustomField > div > textarea::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #31D6E0;
+}
+.contatUsSubmit{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+};
+.emailMessage {
+    padding-top: 2px;
+    color: rgba(231, 85, 120, 1);
+};

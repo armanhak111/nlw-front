@@ -1,0 +1,43 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    border-top: 1px solid #FDFDFD;
+}
+.containerFooter{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.policy{
+    margin-top: 25px;
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FDFDFD;
+    letter-spacing: 0.02em;
+    padding-bottom: 15px;
+}
+.policy > div {
+    cursor: pointer;
+    margin-right: 60px;
+}
+.sertificate {
+    margin-top: 25px;
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FDFDFD;
+    letter-spacing: 0.02em;
+    padding-bottom: 15px;
+}
+
+.policy > div:hover{
+    color: rgba(49, 214, 224, 1);
+    transition: all .5s ease-in-out;
+    border-bottom: 1px solid rgba(49, 214, 224, 1);
+}

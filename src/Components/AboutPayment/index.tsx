@@ -7,7 +7,7 @@ const AboutPayment:React.FC = () => {
     return (
         <div className="aboutPaymentContainer">
             <div className="aboutPayment">
-
+                We accept only cryptocurrency method of payment
             </div>
         </div>
     )
