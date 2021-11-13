@@ -1,10 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import DietPlanImage from '../../assets/images/dietPlan.png'
 import { GetQuoteActiveButton } from '../buttons/getquote';
 import './styles.css'
 
 
 const DiscoverNewMethod: React.FC = () => {
+    const history = useHistory();
     return (
         <div className='discoverNewMethodContainer'>
             <div className='newMethodTextAndGet'>
@@ -12,9 +14,12 @@ const DiscoverNewMethod: React.FC = () => {
                     Discover a new method of fast weight loss
                 </div>
                 <div className='newMethodText'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida metus massa cursus mauris amet, enim, ut aliquet. Vitae pretium purus fermentum quam facilisi netus scelerisque augue.
+                    Together with us you will discover the fastest and easiest way to lose weight.
+                    It won't take much of your time and actually won't require a waste of your financial resources.
+                    The result will be obvious from the very first week.
+                    Join us and get the body of your dreams.
                 </div>
-                <div className='newMethodButton'>
+                <div onClick={() => history.push('/getquote')} className='newMethodButton'>
                     <GetQuoteActiveButton />
                 </div>
             </div>

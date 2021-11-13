@@ -5,7 +5,7 @@ import DiscoverNewMethod from '../../Components/DiscoverNewMethod';
 import Header from '../../Components/header';
 import WeGiveAGuarantee from '../../Components/WeGiveAGuarantee';
 import YourProblemOurSolution from '../../Components/YourProblemOurSolution';
-
+import Footer from '../../Components/footer/index'
 
 const MainPage: React.FC = () => {
     return (
@@ -16,6 +16,7 @@ const MainPage: React.FC = () => {
             <WeGiveAGuarantee />
             <ContactUs />
             <AboutPayment />
+            <Footer/>
         </div>
     )
 }

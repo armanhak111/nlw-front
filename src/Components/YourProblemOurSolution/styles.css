@@ -19,6 +19,7 @@
     width: 440px;
 }
 .problem{
+    position: relative;
     width: 440px;
 }
 .problemSolutionHeader{
@@ -48,7 +49,7 @@
 .problemSolutionSteps{
     position: absolute;
     width: 1px;
-    height: 770px;
+    height: 700px;
     left: 800px;
     top: -172px;
     background: linear-gradient(rgba(253, 253, 253, 0),rgba(253, 253, 253, 0.4996),rgba(253, 253, 253, 0.8797),rgba(253, 253, 253, 1));

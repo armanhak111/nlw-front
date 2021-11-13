@@ -9,7 +9,10 @@ const WeGiveAGuarantee: React.FC = () => {
                 <div className="guaranteeContainer">
                     <div className="guarantee">
                         <div className="headerGuarantee">We Give a Guarantee</div>
-                        <div className="guaranteeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse morbi est lectus arcu sollicitudin rhoncus, sit scelerisque aliquet. Convallis pharetra malesuada erat tortor. Aliquet pulvinar scelerisque aliquam aliquam tempus.</div>
+                        <div className="guaranteeText">
+                            You will achieve your dream without even leaving your home, without wasting time and resources, we guarantee
+                            you that. Our approach has been approved by numerous doctors and received international certification. Our experts are world-renowned.
+                        </div>
                     </div>
                 </div>
                 <div className="vitaminImage">

@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
+
 .aboutPaymentContainer{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .aboutPayment{
-    width: 1168px;
+    width: 68%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 94px;
     background: rgba(34, 22, 81, 0.6);
+    background-image: url('../../assets/images/cryptoBackground.png');
     border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
 }

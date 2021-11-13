@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
+
+.profileCOntainer{
+    display: flex;
+    justify-content: center;
+}
+.profile{ 
+    width: 60%;
+    height: 524px;
+    margin-top: 80px;
+    background: #221651;
+    margin-bottom: 0px;
+    opacity: 0.8;
+    box-shadow: 0px 8px 38px rgb(0 0 0 / 8%);
+    border-radius: 10px;
+}
+.profileIdHeader{
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 145.9%;
+    text-align: center;
+    color: #F8F8F8;
+}
+.findId{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
+}
+.dietIdField{
+    margin-top: 48px;
+}
+.customDietField > div > input {
+    width: 35em !important;
+}
+.confirmBTN{
+    margin-top: 40px;
+}
+.clickHere{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;  
+    cursor: pointer;
+    color: #FDFDFD;
+    transition: 0.2s;
+    margin-left: 8px;
+}
+.clickHere > p{
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
+    border-bottom: 0px;
+}
+.clickHere:hover{
+    color: rgba(49, 214, 224, 1);
+}
+.clickHere > p:hover{
+    border-bottom: 1px solid rgba(49, 214, 224, 1);
+}
+.noHaveAccount{
+    margin-right: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
+}
+.clichForAccount{
+    margin-top: 40px;
+}
+.errorMessageProfile{
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    color: rgba(231, 85, 120, 1);    
+}
+
+@media screen and (max-width : 992px) {
+    .profile  {
+      width: 90% !important;
+    }
+  }
+  
+  @media screen and (max-width : 768px) {
+    .profile  {
+      width: 95% !important;
+    }
+    .customDietField > div > input {
+        width: 23em !important;
+    }
+  }
+  
