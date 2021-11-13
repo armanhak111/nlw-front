@@ -134,8 +134,70 @@
     text-align: center;
     color: #F8F8F8;
 }
-.ilnessLabel{
-    color: red;
+
+.getQuoteMessage > div {
+    width: 100% !important;
+}
+.messageCustomFieldGetQuote > div {
+    width: 100% !important;
+}
+.getQuoteFormSubmitButton{
+    position: relative;
+    margin-top:  80px !important;
+    display: flex;
+    justify-content: center;
+}
+.multipleIlnessSelect {
+    opacity: 0.6;
+}
+.multipleIlnessSelect > div {
+    margin: 8px 0 0px 0 !important;
+}
+.multipleIlnessSelect > div > label {
+    color: #F8F8F8 !important;
+    font-size: 19px !important;
+}
+.multipleIlnessSelect > div > div > svg {
+    display: none;
+}
+.multipleIlnessSelect > div > div  {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F8F8F8;
+}
+.MuiPaper-root {
+    background: #221651 !important;
+}
+.MuiPaper-root::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(196, 196, 196, 0.34);
+ }
+  
+  .MuiPaper-root::-webkit-scrollbar-thumb {
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50px;
+    background-color: #31D6E0;
+  }
+.multipleIlnessSelect > div > div > fieldset {
+    border: none !important;
+    border-bottom: 1px solid #F8F8F8 !important;
+    border-radius: revert !important;
+}
+.MuiListItemText-root{
+    color: rgba(196, 196, 196, 0.34) !important ;
+}
+.getQuoteErrorMessage{
+    position: absolute;
+    top: -35px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgba(233, 89, 88, 1);
+    line-height: 17px;
 }
 .quoteText{
     font-family: 'Poppins', sans-serif;
