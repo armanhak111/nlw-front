@@ -6,6 +6,8 @@ const initialState: MainSlice = {
   newDietID: "",
   adminAccess: true,
   isModalOpen: { status: false, type: '', message: '' },
+  loader: false,
+  currentUser: null
 };
 
 const api = 'https://safe-wave-11883.herokuapp.com/api'
@@ -31,7 +33,19 @@ export const mainSlice = createSlice({
         ...state,
         isModalOpen: action.payload
       }
-    }
+    },
+    setLoading: (state, action) => {
+      return {
+        ...state,
+        loader: action.payload
+      }
+    },
+    setCurrentUser: (state, action) => {
+      return {
+        ...state,
+        currentUser: action.payload
+      }
+    },
   },
 });
 
@@ -54,22 +68,33 @@ export const createNewUser = (data: { email?: string, dietId?: string, date?: st
     })
 }
 
-export const getCurrentUserRequestAction = (dietId : string) => (dispatch: any) => {
+export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdmin?:boolean) => (dispatch: any) => {
+  dispatch(setLoading(true))
   axios.get(`${api}/users/${dietId}`)
     .then((response: any) => {
       if (response.status === 200) {
-        dispatch(setModalOpenAction(
-          {
-            status: true,
-            type: ModalTypes.info,
-            message: JSON.stringify(response.data[0]),
-          }
-        ))
+        if (isAdmin) {
+          dispatch(setModalOpenAction(
+            {
+              status: true,
+              type: ModalTypes.info,
+              message: JSON.stringify(response.data[0]),
+            }
+          ))
+        }
+        dispatch(setCurrentUser(response.data[0]))
+        if(history && response.data.length){
+          history.push(`/user-profile/${response.data[0].dietId}`)
+          localStorage.setItem('USER',JSON.stringify(response.data[0].dietId))
+        }
       }
+    })
+    .finally(() => {
+      dispatch(setLoading(false))
     })
 }
 
-export const deleteCurrentUserAction = (dietId : string) => (dispatch: any) => {
+export const deleteCurrentUserAction = (dietId: string) => (dispatch: any) => {
   axios.delete(`${api}/users/${dietId}`)
     .then((response: any) => {
       if (response.status === 200) {
@@ -84,7 +109,7 @@ export const deleteCurrentUserAction = (dietId : string) => (dispatch: any) => {
     })
 }
 
-export const addDietRequestAction = (data: { dietId?: string, count?: number}) => (dispatch: any) => {
+export const addDietRequestAction = (data: { dietId?: string, count?: number }) => (dispatch: any) => {
   axios.put(`${api}/users`, JSON.stringify(data), {
     headers: {
       'Content-Type': 'application/json'
@@ -103,6 +128,6 @@ export const addDietRequestAction = (data: { dietId?: string, count?: number}) =
     })
 }
 
-export const { setNewDietId, setAdminAccessybility, setModalOpenAction } = mainSlice.actions;
+export const { setLoading, setCurrentUser, setNewDietId, setAdminAccessybility, setModalOpenAction } = mainSlice.actions;
 
 export default mainSlice.reducer;

@@ -1,10 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import DietPlanImage from '../../assets/images/dietPlan.png'
 import { GetQuoteActiveButton } from '../buttons/getquote';
 import './styles.css'
 
 
 const DiscoverNewMethod: React.FC = () => {
+    const history = useHistory();
     return (
         <div className='discoverNewMethodContainer'>
             <div className='newMethodTextAndGet'>
@@ -17,7 +19,7 @@ const DiscoverNewMethod: React.FC = () => {
                     The result will be obvious from the very first week.
                     Join us and get the body of your dreams.
                 </div>
-                <div className='newMethodButton'>
+                <div onClick={() => history.push('/getquote')} className='newMethodButton'>
                     <GetQuoteActiveButton />
                 </div>
             </div>

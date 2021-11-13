@@ -17,6 +17,13 @@ export const ErrorModalComponent: React.FC = () => {
 
 export const SuccessModalComponent: React.FC = () => {
     const history = useHistory()
+    const dispacth = useDispatch()
+    const goTo = (route:string) => {
+        dispacth(setModalOpenAction({}))
+        setTimeout(() => {
+            history.push(route)
+        },700)
+    } 
     return (
         <div className='modalContainer'>
             <div className='success'>
@@ -26,16 +33,16 @@ export const SuccessModalComponent: React.FC = () => {
                 We generate a unique Diet ID for you
             </div>
             <div className='afterPaymentShowDietText'>
-                After Payment we can show your diet
+            After payment  you will be able to see your diet
             </div>
             <div className='checkYourEmailText'>
-                Chack your Email!
+                Please check your Email!
             </div>
             <div className='succesModalButtonContainer'>
-                <div className='secondaryButton' onClick={() => history.push('/home')}>
+                <div className='secondaryButton' onClick={() => goTo('/')}>
                     Home Page
                 </div>
-                <div className='primaryButton' onClick={() => history.push('/profile')}>
+                <div className='primaryButton' onClick={() => goTo('/profile')}>
                     Profile
                 </div>
             </div>

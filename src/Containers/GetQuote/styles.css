@@ -199,6 +199,12 @@
     color: rgba(233, 89, 88, 1);
     line-height: 17px;
 }
+@media screen and (max-width : 768px) {
+    .quote {
+      width: 95% !important;
+    }
+  }
+  
 .quoteText{
     font-family: 'Poppins', sans-serif;
     font-style: normal;

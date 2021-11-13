@@ -9,8 +9,10 @@ import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import { EMAIL_INVALID, GET_QUOTE_VALUES_INITIAL, ILNESS, PLEASE_FILL } from '../../Utils/constants';
-import { CURRENT_WIGHT_POINT } from '../../Constants';
+import { CURRENT_WIGHT_POINT, ModalTypes } from '../../Constants';
 import { EMAIl } from '../../Utils/validations';
+import { useDispatch } from 'react-redux';
+import { setModalOpenAction } from '../../store/slice';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -29,7 +31,7 @@ const GetQuoteComponent: React.FC = () => {
     const [getQuote, setGetQuote] = useState<any>(GET_QUOTE_VALUES_INITIAL)
     const [error, setError] = useState<string>('');
     const currentWeightNaming = curretWeightPoint ? CURRENT_WIGHT_POINT.kg : CURRENT_WIGHT_POINT.lbs
-
+    const dispatch = useDispatch();
     const handleIlness = (event: any) => {
         const {
             target: { value },
@@ -53,7 +55,15 @@ const GetQuoteComponent: React.FC = () => {
         if (!EMAIl.test(getQuote.email)) {
             return setError(EMAIL_INVALID)
         }
-        setError('');
+
+        dispatch(setModalOpenAction(
+            {
+              status: true,
+              type: ModalTypes.success,
+            }
+          ))
+          setError('');
+          setGetQuote(GET_QUOTE_VALUES_INITIAL)
         console.log({
             ...getQuote,
             ilness,

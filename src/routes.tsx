@@ -4,6 +4,7 @@ import { Redirect, Route, Switch } from 'react-router';
 import GetQuote from './Containers/GetQuote';
 import MainPage from './Containers/LandingPage';
 import { ModalCreator } from './Containers/ModalCreator';
+import ProfileIDPage from './Containers/ProfileIDPage';
 import { SystemAdministrator } from './Containers/SystemAdministrator';
 import { adminAccessSelector } from './store/selector';
 import { ROUTES } from './Utils/constants';
@@ -17,6 +18,7 @@ export const Routes: React.FC = () => {
             <Switch>
                 <Route exact path={ROUTES.home} component={MainPage} />
                 <Route exact path={ROUTES.getQuote} component={GetQuote} />
+                <Route exact path={ROUTES.profile} component={ProfileIDPage} />
                 <Route path={ROUTES.admin} component={SystemAdministrator}>
                     {!adminAccess && <Redirect to='/' />}
                 </Route>
