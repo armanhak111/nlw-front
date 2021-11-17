@@ -12,7 +12,8 @@ import { EMAIL_INVALID, GET_QUOTE_VALUES_INITIAL, ILNESS, PLEASE_FILL } from '..
 import { CURRENT_WIGHT_POINT, ModalTypes } from '../../Constants';
 import { EMAIl } from '../../Utils/validations';
 import { useDispatch } from 'react-redux';
-import { setModalOpenAction } from '../../store/slice';
+import { createNewUser, setModalOpenAction } from '../../store/slice';
+import { v1 as uuidv1 } from 'uuid';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -64,11 +65,14 @@ const GetQuoteComponent: React.FC = () => {
           ))
           setError('');
           setGetQuote(GET_QUOTE_VALUES_INITIAL)
-        console.log({
-            ...getQuote,
-            ilness,
-            weightNaming: currentWeightNaming
-        })
+          dispatch(createNewUser({
+            email: getQuote.email,
+            dietId: uuidv1(),
+            date: new Date().toISOString().split('T')[0],
+            name: getQuote.name,
+            weight: `${getQuote.weight} ${currentWeightNaming}`,
+            old: Number(getQuote.old)
+        },false))
     }
 
     return (

@@ -6,6 +6,7 @@ import MainPage from './Containers/LandingPage';
 import { ModalCreator } from './Containers/ModalCreator';
 import ProfileIDPage from './Containers/ProfileIDPage';
 import { SystemAdministrator } from './Containers/SystemAdministrator';
+import UserPage from './Containers/User';
 import { adminAccessSelector } from './store/selector';
 import { ROUTES } from './Utils/constants';
 
@@ -22,6 +23,7 @@ export const Routes: React.FC = () => {
                 <Route path={ROUTES.admin} component={SystemAdministrator}>
                     {!adminAccess && <Redirect to='/' />}
                 </Route>
+                <Route exact path={`${ROUTES.user}/:dietId`} component={UserPage} />
             </Switch>
         </div>
     )
