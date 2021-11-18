@@ -7,7 +7,8 @@ const initialState: MainSlice = {
   adminAccess: true,
   isModalOpen: { status: false, type: '', message: '' },
   loader: false,
-  currentUser: false
+  currentUser: false,
+  contactUsBackRoute: false
 };
 
 const api = 'https://safe-wave-11883.herokuapp.com/api'
@@ -46,10 +47,16 @@ export const mainSlice = createSlice({
         currentUser: action.payload
       }
     },
+    setContactUsBackRoute: (state, action) => {
+      return {
+        ...state,
+        contactUsBackRoute: action.payload
+      }
+    },
   },
 });
 
-export const createNewUser = (data: any, idAdmin?:boolean) => (dispatch: any) => {
+export const createNewUser = (data: any, idAdmin?: boolean) => (dispatch: any) => {
   axios.post(`${api}/adduser`, JSON.stringify(data), {
     headers: {
       'Content-Type': 'application/json'
@@ -57,7 +64,7 @@ export const createNewUser = (data: any, idAdmin?:boolean) => (dispatch: any) =>
   })
     .then((response: any) => {
       if (response.status === 200) {
-        if(idAdmin){
+        if (idAdmin) {
           dispatch(setModalOpenAction(
             {
               status: true,
@@ -65,12 +72,12 @@ export const createNewUser = (data: any, idAdmin?:boolean) => (dispatch: any) =>
               message: response.data.message
             }
           ))
-        }        
+        }
       }
     })
 }
 
-export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdmin?:boolean) => (dispatch: any) => {
+export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdmin?: boolean) => (dispatch: any) => {
   dispatch(setCurrentUser(false))
   dispatch(setLoading(true))
   axios.get(`${api}/users/${dietId}`)
@@ -86,9 +93,9 @@ export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdm
           ))
         }
         dispatch(setCurrentUser(response.data))
-        if(history && response.data && !isAdmin){
+        if (history && response.data && !isAdmin) {
           // history.push(`/user-profile/${response.data.dietId}`)
-          localStorage.setItem('USER',JSON.stringify(response.data.dietId))
+          localStorage.setItem('USER', JSON.stringify(response.data.dietId))
         }
       }
     })
@@ -131,6 +138,13 @@ export const addDietRequestAction = (data: { dietId?: string, count?: number }) 
     })
 }
 
-export const { setLoading, setCurrentUser, setNewDietId, setAdminAccessybility, setModalOpenAction } = mainSlice.actions;
+export const {
+  setLoading,
+  setContactUsBackRoute,
+  setCurrentUser,
+  setNewDietId,
+  setAdminAccessybility,
+  setModalOpenAction
+} = mainSlice.actions;
 
 export default mainSlice.reducer;

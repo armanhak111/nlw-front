@@ -15,4 +15,6 @@ export const LOADING = createSelector(mainSelector, state => state.loader)
 
 export const CurrentUser = createSelector(mainSelector, state => state.currentUser)
 
+export const ConstacUS = createSelector(mainSelector, state => state.contactUsBackRoute)
+
 

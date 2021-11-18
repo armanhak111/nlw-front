@@ -71,11 +71,9 @@
 .currentTimeToEat{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: bold;
-    margin-top: 4px;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 130%;
-    letter-spacing: 0.3px;
+    letter-spacing: 1px;
     color: #F3F0FF;
 }
 .currentMeal{

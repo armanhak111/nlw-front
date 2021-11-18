@@ -22,6 +22,7 @@
 .getQuoteContainer{
     display: table-cell;
     vertical-align: middle;
+    transition: 1s;
 }
 .classicItem{
     display: table-cell;

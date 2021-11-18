@@ -4,8 +4,7 @@
     width: 1400px;
     height: 1000px;
     margin-top: 100px;
-    background: #221651;
-    opacity: 0.6;
+    background: rgba(34, 22, 81, 0.6);
     box-shadow: 0px 8px 38px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
 }
@@ -36,4 +35,89 @@
 .dietAndDietPlan{
     display: flex;
     justify-content: space-around;
+}
+.weekAndStartWeightContainer{
+    display: flex;
+    padding: 60px 0px 40px 82px;
+}
+.weekCurrent{
+    display: table;
+    justify-content: center;
+    text-align: center;
+    width: 154px;
+    height: 42px;
+    background: linear-gradient(94.18deg, #3F83E9 0.44%, #31D6E0 99.61%);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 145.9%;
+    color: #F8F8F8;
+}
+.weekCurrent > span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.startWeight{
+    margin-left: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    display: table;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 145.9%;
+    color: #F8F8F8;
+    opacity: 0.8;
+}
+.startWeight > span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.startWeight > span > span {
+    margin-left: 20px;
+}
+.downloadGetNextContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 43%;
+    padding: 49px 0px 0px 41px;
+}
+.download{
+    width: 214px;
+    height: 58px;
+    border-radius: 10px;
+    display: flex;
+    border: 3px solid #31D6E0;
+}
+.donwloadIcon{
+    cursor: pointer;
+    margin: 3px 0px 0px 2px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(94.18deg, #3F83E9 0.44%, #31D6E0 99.61%);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+.donwloadIcon>img{
+    margin-top: 6px;
+    width: 22px;
+    height: 35px;
+}
+.downloadText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #F8F8F8;
 }

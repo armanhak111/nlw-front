@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
+
+  .section-header {
+    text-align: center;
+  }
+  .section-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .section-header hr {
+    border: 1px solid #fff;
+    width: 56px;
+  }
+  .bg-gradient_solid {
+    background: var(--primary-gradient);
+    color: #fff;
+    padding: 48px 0;
+  }
+  .steps {
+    position: relative;
+    margin-top: 32px;
+  }
+  .steps::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color:  rgba(253, 253, 253, 0.5);
+    opacity: 0.4;
+    top: -90px;
+    bottom: 0;
+    left: 50%;
+  }
+  
+  .steps .content p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 37px;
+    letter-spacing: 0.02em;    
+    color: #FDFDFD;    
+    opacity: 0.85;
+  }
+  .flexEnd{
+      display: flex;
+      justify-content: flex-end;
+  }
+  .steps .content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 76px;
+    letter-spacing: 0.02em;
+    color: #FDFDFD;
+  }
+  .firstT {
+      text-align: right;
+  }
+  .secondT{
+      text-align: left;
+  }
+  .steps-container {
+    position: relative;
+    background-color: inherit;
+    width: calc(50% + 11px);
+  }
+  
+  .steps-container .content {
+    padding: 32px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 0px 0px 80px 0px;
+    box-shadow: 0px 16px 27px rgb(0 11 30 / 10%);
+  }
+  
+  .steps .steps-container:nth-child(even) {
+    left: calc(50% - 11px);
+    flex-direction: row-reverse;
+  }
+  
+  .steps-container {
+    display: flex;
+  }
+  
+  .steps .steps-container .date {
+    font-weight: 900;
+    margin-top: 56px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: #32D1E1;
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 777;
+  }
+  
+  
+  @media (max-width: 767px) {
+      .firstT{
+          text-align: left !important;
+      }
+      .flexEnd{
+          justify-content: flex-start;
+      }
+    .steps::after {
+      left: 11px;
+    }
+    .steps-container {
+      left: 0;
+      flex-direction: row-reverse;
+      width: auto;
+      margin-bottom: 16px;
+    }
+    .steps .steps-container:nth-child(even) {
+      left: 0;
+    }
+  }
+  

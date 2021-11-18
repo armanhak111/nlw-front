@@ -4,8 +4,7 @@
     display: block;
     width: 70%;
     height: 1057px;
-    background: #221651;
-    opacity: 0.6;
+    background: rgba(34, 22, 81, 0.6);
     box-shadow: 0px 8px 38px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
 };
@@ -91,7 +90,6 @@
     width: 50%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background: #F8F8F8;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -105,7 +103,6 @@
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 30px rgba(17, 16, 67, 0.2);
     width: 50%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
