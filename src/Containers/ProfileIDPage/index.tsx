@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import { GetQuoteActiveButton } from '../../Components/buttons/getquote';
 import { UUID } from '../../Utils/validations';
 import { useHistory } from 'react-router';
-import { ID_INVALID, USER_CANT_FIND } from '../../Utils/constants';
+import { cantAccess, ID_INVALID, USER_CANT_FIND } from '../../Utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCurrentUserRequestAction } from '../../store/slice';
 import { CurrentUser } from '../../store/selector';
@@ -20,8 +20,15 @@ const ProfileIDPage: React.FC = () => {
     const [error, setError] = useState<string>('')
 
     useEffect(() => {
-        if(currentUser !== null && !currentUser){
+        if(!currentUser && typeof currentUser !== 'boolean'){
             setError(USER_CANT_FIND)
+        }
+    }, [currentUser])
+
+    useEffect(() => {
+        if(typeof currentUser !=='boolean' && (currentUser && Array.isArray(currentUser.diets)) && !currentUser?.diets.length){
+            const currentError = cantAccess(currentUser.name)
+            setError(currentError)
         }
     }, [currentUser])
 

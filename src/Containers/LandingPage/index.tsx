@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AboutPayment from '../../Components/AboutPayment';
 import ContactUs from '../../Components/ContactUs';
 import DiscoverNewMethod from '../../Components/DiscoverNewMethod';
 import Header from '../../Components/header';
 import WeGiveAGuarantee from '../../Components/WeGiveAGuarantee';
-import YourProblemOurSolution from '../../Components/YourProblemOurSolution';
 import Footer from '../../Components/footer/index'
+import { Timeline } from '../../Components/TimeLine/index'
+import { useSelector } from 'react-redux';
+import { ConstacUS } from '../../store/selector';
+import { setContactUsBackRoute } from '../../store/slice';
 
 const MainPage: React.FC = () => {
+    const contactUs = useSelector(ConstacUS)
+    console.log(contactUs)
+    useEffect(() => {
+        if(contactUs){
+            setContactUsBackRoute(false)
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+        }
+    },[contactUs])
+
     return (
         <div>
             <Header />
             <DiscoverNewMethod />
-            <YourProblemOurSolution />
+            <Timeline />
             <WeGiveAGuarantee />
             <ContactUs />
-            <AboutPayment />
+            <AboutPayment /> 
             <Footer/>
         </div>
     )

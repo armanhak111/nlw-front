@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
+
+.dietContainer{
+    width: 599px;
+    height: 553px;
+    background: #3D3072;
+    box-shadow: 0px 8px 38px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: auto;
+}
+.dietMain{
+    display: flex;
+    padding: 25px;
+}
+.circle {
+    position: relative;
+    border: 2px solid #999;
+    border-radius: 100%;
+    width: 9px;
+    height: 9px;
+    text-align: center;
+    margin-top: 200px;
+    background-color: #fff;
+    z-index: 2;
+}
+.circle:first-child {
+    margin-top: 0;
+}
+.circle:before {
+    position: absolute;
+    border: 1px solid #999; 
+    width: 0;
+     height: 200px;
+    display: block;
+    content: '';
+    left: 50%;
+    z-index: 1; 
+    top: 10px;
+    margin-left: -1px;
+}
+
+.currentDay{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.3px;
+    color: #F3F0FF;
+}
+.currentDayContainer div:not(:first-child) {
+    margin-top: 192px;
+}
+.currentDayContainer{
+    margin: 1px 9px 0 10px;
+}
+.currentDayContainer{
+    margin-top: 25px;
+}
+
+.currentCircle{
+    margin-top: 25px;
+}
+.dietPlanContainer{
+    margin-left: 10px;
+    margin-top: 54px;
+}
+
+.currentTimeToEat{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #F3F0FF;
+}
+.currentMeal{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    margin-top: 7px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    align-items: center;
+    letter-spacing: 0.3px;
+    color: #F3F0FF;
+}
+
+.dietContainer::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(196, 196, 196, 0.34);
+  }
+  
+  .dietContainer::-webkit-scrollbar-thumb {
+    background: linear-gradient(94.18deg, #3F83E9 0.44%, #31D6E0 99.61%);
+    border-radius: 10px;
+  }

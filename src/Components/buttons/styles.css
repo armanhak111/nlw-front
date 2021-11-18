@@ -38,11 +38,32 @@
     color: #F8F8F8;
     transition: 1s;
 }
-.getQuotePassive:hover {
+.getQuoteContainer:hover > .getQuotePassive  {
     background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.3) 0.44%, rgba(49, 214, 224, 0.3) 99.61%);
     transform: scale(1.05);
 }
 .getQuoteActive:hover {
     background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.3) 0.44%, rgba(49, 214, 224, 0.3) 99.61%);
     transform: scale(1.05);
+}
+
+.getNextBUtton{
+    width: 217px;
+    height: 64px;
+    background: linear-gradient(94.18deg, #3F83E9 0.44%, #31D6E0 99.61%);
+    border-radius: 13px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    color: #F8F8F8;
+}
+.getNextBUtton:hover {
+    background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.3) 0.44%, rgba(49, 214, 224, 0.3) 99.61%);
 }

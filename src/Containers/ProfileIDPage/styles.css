@@ -8,9 +8,8 @@
     width: 60%;
     height: 524px;
     margin-top: 80px;
-    background: #221651;
+    background: rgba(34, 22, 81, 0.6);
     margin-bottom: 0px;
-    opacity: 0.8;
     box-shadow: 0px 8px 38px rgb(0 0 0 / 8%);
     border-radius: 10px;
 }

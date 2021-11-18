@@ -31,3 +31,12 @@ export const GetQuotePassiveButton: React.FC<PropTypes> = ({text}) => {
         </div>
     )
 }
+
+
+export const GetNext:React.FC = () => {
+    return (
+        <div className='getNextBUtton'>
+            <span>Get Next</span>
+        </div>
+    )
+}

@@ -51,7 +51,7 @@ export const SystemAdministrator: React.FC = () => {
     }
 
     const createUser = () => {
-        dispatch(createNewUser(addUser))
+        dispatch(createNewUser(addUser,true))
     }
     const addUserDiet = () => {
         const newDietParams = {
@@ -62,7 +62,7 @@ export const SystemAdministrator: React.FC = () => {
         console.log(newDietParams)
     }
     const getCurrentUserRequest = () => {
-        dispatch(getCurrentUserRequestAction(currentUser.id))
+        dispatch(getCurrentUserRequestAction(currentUser.id,undefined,true))
     }
     const getDeleteUserRequest = () => {
         dispatch(deleteCurrentUserAction(deleteUser.id))
@@ -95,6 +95,20 @@ export const SystemAdministrator: React.FC = () => {
                     <div className='add_block'>
                         <label className='add_label'>Date</label>
                         <input onChange={addUserEvent} className='add_input' type='date' name='date' />
+                    </div>
+                </div>
+                <div className='add_user_container'>
+                <div className='add_block'>
+                        <label className='add_label'>Name</label>
+                        <input onChange={addUserEvent} className='add_input' type='text' name='name' />
+                    </div>
+                    <div className='add_block'>
+                        <label className='add_label'>Weight</label>
+                        <input onChange={addUserEvent} className='add_input' type='text' name='weight' />
+                    </div>
+                    <div className='add_block'>
+                        <label className='add_label'>Old</label>
+                        <input onChange={addUserEvent} className='add_input' type='number' name='old' />
                     </div>
                 </div>
             </div>
