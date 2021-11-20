@@ -8,7 +8,8 @@ const initialState: MainSlice = {
   isModalOpen: { status: false, type: '', message: '' },
   loader: false,
   currentUser: false,
-  contactUsBackRoute: false
+  contactUsBackRoute: false,
+  getNextModalOpen: false
 };
 
 const api = 'https://safe-wave-11883.herokuapp.com/api'
@@ -53,6 +54,12 @@ export const mainSlice = createSlice({
         contactUsBackRoute: action.payload
       }
     },
+    setGetNextModalStatus: (state, action) => {
+      return {
+        ...state,
+        getNextModalOpen: action.payload
+      }
+    },
   },
 });
 
@@ -93,9 +100,16 @@ export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdm
           ))
         }
         dispatch(setCurrentUser(response.data))
-        if (history && response.data && !isAdmin) {
-          // history.push(`/user-profile/${response.data.dietId}`)
-          localStorage.setItem('USER', JSON.stringify(response.data.dietId))
+        if (history && window.location.pathname === '/profile' && response.data && !isAdmin) {
+          if(response.data.diets.length){
+            history.push(`/user/${response.data.dietId}`)
+          }
+        }
+        if(history && window.location.pathname !== '/profile' && response.data === null && !isAdmin){
+          history.push('/')
+        }
+        if(!response.data?.diets.length && window.location.pathname !== '/profile' ){
+          history.push('/')
         }
       }
     })
@@ -144,7 +158,8 @@ export const {
   setCurrentUser,
   setNewDietId,
   setAdminAccessybility,
-  setModalOpenAction
+  setModalOpenAction,
+  setGetNextModalStatus
 } = mainSlice.actions;
 
 export default mainSlice.reducer;

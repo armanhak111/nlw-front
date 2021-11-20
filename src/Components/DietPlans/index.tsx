@@ -18,7 +18,7 @@ const fakeDietData = [
     },
 ]
 
-const DietPlans: React.FC = () => {
+const DietPlans: React.FC<{currentUser:any}> = ({currentUser}) => {
     return (
         <div className="dietPlansContainer">
             <div className="dietPlansHeader">
@@ -28,7 +28,7 @@ const DietPlans: React.FC = () => {
                 {fakeDietData.map((el:any, index) => {
                     if(el.paid){
                         return (
-                            <PaidDiet currentWeek={index + 1} />
+                            <PaidDiet currentUser={currentUser} currentWeek={index + 1} />
                         )
                     }else{
                         return (

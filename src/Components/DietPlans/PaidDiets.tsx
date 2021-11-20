@@ -4,11 +4,10 @@ import './styles.css'
 
 interface IProps {
     currentWeek?: number
-    currentWeight?: number
-    currentWeightPoint?: string
+    currentUser: any
 }
 
-export const PaidDiet:React.FC<IProps> = ({currentWeek = 1, currentWeight = 100, currentWeightPoint='kg' }) => {
+export const PaidDiet:React.FC<IProps> = ({currentWeek = 1, currentUser }) => {
     return (
         <div className='PaidDietConatiner'>
             <div className="weekAndStartWeight">
@@ -16,7 +15,7 @@ export const PaidDiet:React.FC<IProps> = ({currentWeek = 1, currentWeight = 100,
                     {currentWeek} Week
                 </div>
                 <div className="weightStart">
-                    Start Weight:    <span>{currentWeight}{currentWeightPoint}</span>
+                    Start Weight:    <span>{currentUser?.weight}</span>
                 </div>
             </div>
             <div className="paid">

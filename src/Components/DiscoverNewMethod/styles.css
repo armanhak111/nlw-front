@@ -33,3 +33,28 @@
     color: #FDFDFD;
     opacity: 0.85;
 }
+.newMethodButton{
+    margin-top: 10px;
+}
+@media screen and (max-width : 1200px) {
+    .discoverNewMethodContainer{
+        display: block;
+    }
+    .newMethodButton{
+        margin-top: 25px;
+    }
+    .newMethodTextAndGet{
+        padding: 70px;
+    }    
+    .dietPlanImageCOntainer{
+        display: flex;
+        justify-content: center;
+    }
+    .newMethodText{
+        width: 100%;
+    }
+    .dietPlanImg{
+        width: 550px;
+        height: 500.95px;
+    }
+  }

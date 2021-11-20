@@ -17,4 +17,5 @@ export const CurrentUser = createSelector(mainSelector, state => state.currentUs
 
 export const ConstacUS = createSelector(mainSelector, state => state.contactUsBackRoute)
 
+export const GetNextModalOpanStatus = createSelector(mainSelector, state => state.getNextModalOpen)
 

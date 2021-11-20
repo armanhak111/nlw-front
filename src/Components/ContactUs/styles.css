@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
 
 .contactUsMainContainer{
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
@@ -108,3 +109,4 @@
     padding-top: 2px;
     color: rgba(231, 85, 120, 1);
 };
+

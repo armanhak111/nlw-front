@@ -6,6 +6,7 @@ import { useHistory, useLocation } from 'react-router';
 import { ROUTES } from '../../Utils/constants';
 import { setContactUsBackRoute } from '../../store/slice';
 import { useDispatch } from 'react-redux';
+import { BurgerMenu } from './burgerMenu';
 
 const Header: React.FC = () => {
     const history = useHistory()
@@ -24,13 +25,16 @@ const Header: React.FC = () => {
             <div style={{cursor:'pointer'}} onClick={() => history.push('/')}>
                 <img src={Logo} alt='logo' />
             </div>
+            <div className="buregerMain">
+                    <BurgerMenu />
+                </div>
             <div className='menuItems'>
-                <div onClick={() => history.push('/profile')} className='menuItemContainer'>
+                <div onClick={() => history.push('/profile')} className='menuItemContainer top'>
                     <div className='classicItem'>
                         <p>Profile</p>
                     </div>
                 </div>
-                <div className='menuItemContainer'>
+                <div className='menuItemContainer top'>
                     <div onClick={contactUs} className='classicItem'>
                         <p>Contact Us</p>
                     </div>

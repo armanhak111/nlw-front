@@ -41,3 +41,8 @@
     transition: all .5s ease-in-out;
     border-bottom: 1px solid rgba(49, 214, 224, 1);
 }
+@media screen and (max-width : 1200px) {
+    .footer {
+        width: 90%;
+    }
+  }
