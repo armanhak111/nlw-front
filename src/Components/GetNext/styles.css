@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
+
+.getNextModalHeader{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 145.9%;
+    text-align: center;
+    color: #F8F8F8;
+}
+.currentModalWeek{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 145.9%;
+    color: #F8F8F8;
+}
+.weekAndStartWeighy{
+    padding: 27px;
+    margin-left: 40px;
+}
+.startWeightModl{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 276px;
+    margin-top: 10px;
+    height: 57px;
+    background: rgba(176, 176, 176, 0.6);;
+    opacity: 0.18;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 145.9%;
+    color: #F8F8F8;
+    opacity: 0.8;
+}
+.startWeightModl>span{
+    margin-left: 10px;
+}
+.modalKgPicker{
+    width: 80%;
+}
+.howYouLose{
+    width: 276px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 57px;
+    background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.14) 0.44%, rgba(49, 214, 224, 0.14) 99.61%);
+    opacity: 0.18;
+    border-radius: 10px;
+    margin: 27px 0px 0px 65px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 145.9%;
+    color: #F8F8F8;
+    opacity: 0.8;
+}
+.howYouLose>span{
+    margin-left: 15px;
+}
+.modalErrorMessage{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(233, 89, 88, 1);
+}
+.modalWeightChangerCurrent{
+    justify-content: flex-end;
+}
+.getNextModalButton{
+    margin-top: 33px;
+}
+.modalWeightChangerCurrent{
+    justify-content: flex-end !important;
+    background: transparent !important;
+}
+@media screen and (max-width : 992px) {
+    .mymodal{
+        width: 95% !important;
+    }
+  }

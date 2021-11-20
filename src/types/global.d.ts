@@ -5,6 +5,7 @@ declare interface MainSlice {
   loader: boolean;
   currentUser: any
   contactUsBackRoute: boolean
+  getNextModalOpen: boolean
 }
 
 declare interface Store {

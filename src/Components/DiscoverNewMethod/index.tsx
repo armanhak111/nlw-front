@@ -23,7 +23,7 @@ const DiscoverNewMethod: React.FC = () => {
                     <GetQuoteActiveButton />
                 </div>
             </div>
-            <div>
+            <div className='dietPlanImageCOntainer'>
                 <img className='dietPlanImg' src={DietPlanImage} alt='dietPlan' />
             </div>
         </div>

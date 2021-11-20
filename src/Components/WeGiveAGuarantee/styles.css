@@ -36,3 +36,19 @@
     height: 820px;
 }
 
+@media screen and (max-width : 1200px) {
+    .weGiceAGuaranteeContainer{
+        display: block;
+    }
+    .guaranteeText{
+        width: 100%;
+    }
+    .vitaminImage{
+        display: flex;
+        justify-content: center;
+    }
+    .vitaminImage > img {
+        width: 580px;
+        height: 580px;
+    }
+  }

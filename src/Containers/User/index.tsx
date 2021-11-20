@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../../Components/footer';
 import Header from '../../Components/header';
 import Diet from '../../Components/Diet'
 import DietPlans from '../../Components/DietPlans';
 import { GetNext } from '../../Components/buttons/getquote';
 import DownloadIcon from '../../assets/icons/downloadIcon.png'
+import GetNextModal from '../../Components/GetNext'
 import './styles.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { getCurrentUserRequestAction, setGetNextModalStatus } from '../../store/slice';
+import { CurrentUser } from '../../store/selector';
+import { useHistory, useParams } from 'react-router';
 
 
 const UserPage: React.FC = () => {
-    const currentDietId: string = JSON.parse(String(localStorage.getItem("USER")))
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const currentUser = useSelector(CurrentUser)
+    const params: any = useParams()
+
+    useEffect(() => {
+        if(!currentUser){
+            dispatch(getCurrentUserRequestAction(params?.dietId,history))
+        }
+    },[])
+
+    const openGetNext = () => {
+        dispatch(setGetNextModalStatus(true))
+    }
     return (
         <>
             <Header />
@@ -19,7 +37,7 @@ const UserPage: React.FC = () => {
                         Profile
                     </div>
                     <div className="currentDietId">
-                        Diet ID : {currentDietId}
+                        Diet ID : {currentUser?.dietId}
                     </div>
                     <div className="weekAndStartWeightContainer">
                         <div className="weekCurrent">
@@ -28,14 +46,14 @@ const UserPage: React.FC = () => {
                         <div className="startWeight">
                             <span>Start Weight:
                                 <span>
-                                    100kg
+                                    {currentUser?.weight}
                                 </span>
                             </span>
                         </div>
                     </div>
                     <div className='dietAndDietPlan'>
                         <Diet />
-                        <DietPlans />
+                        <DietPlans currentUser={currentUser} />
                     </div>
                     <div className="downloadGetNextContainer">
                         <div className="download">
@@ -46,11 +64,12 @@ const UserPage: React.FC = () => {
                                 Download
                             </div>
                         </div>
-                        <div className="getNextDown">
+                        <div onClick={openGetNext} className="getNextDown">
                             <GetNext />
                         </div>
                     </div>
                 </div>
+                <GetNextModal />
             </div>
             <Footer />
         </>
