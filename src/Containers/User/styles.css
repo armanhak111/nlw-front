@@ -32,6 +32,9 @@
     text-align: center;
     color: #F8F8F8;
 }
+.currentDietId > span {
+    margin-left: 10px;
+}
 .dietAndDietPlan{
     display: flex;
     justify-content: space-around;

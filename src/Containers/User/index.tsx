@@ -23,7 +23,7 @@ const UserPage: React.FC = () => {
         if(!currentUser){
             dispatch(getCurrentUserRequestAction(params?.dietId,history))
         }
-    },[])
+    },[currentUser,dispatch,history,params?.dietId])
 
     const openGetNext = () => {
         dispatch(setGetNextModalStatus(true))
@@ -37,7 +37,10 @@ const UserPage: React.FC = () => {
                         Profile
                     </div>
                     <div className="currentDietId">
-                        Diet ID : {currentUser?.dietId}
+                        Name : <span>{currentUser?.name}</span>
+                    </div>
+                    <div className="currentDietId">
+                        Diet ID : <span>{currentUser?.dietId}</span>
                     </div>
                     <div className="weekAndStartWeightContainer">
                         <div className="weekCurrent">

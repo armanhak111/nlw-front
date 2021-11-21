@@ -16,7 +16,7 @@ const GetNextModal: React.FC = () => {
     const [lose, setLose] = useState<any>()
     const [weight, setWeight] = useState<any>()
     const [error, setError] = useState<boolean>(false)
-    console.log(currentUser)
+
     useEffect(() => {
         if(currentUser){
             setCurrentUserCredentials({
@@ -25,7 +25,7 @@ const GetNextModal: React.FC = () => {
                 weightPoint: currentUser.weight.split(" ")[1]
             })
         }
-    }, [])
+    }, [currentUser])
     const dispatch = useDispatch()
     const toggleModal = () => {
         dispatch(setGetNextModalStatus(false))
@@ -35,7 +35,7 @@ const GetNextModal: React.FC = () => {
         if (weight) {
             setLose(currentUserCredetials.weight - weight)
         }
-    }, [weight])
+    }, [weight,currentUserCredetials.weight])
 
 
     const getNextDiet = () => {
