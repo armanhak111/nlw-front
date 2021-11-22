@@ -1,12 +1,11 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addDietRequestAction, createNewUser, deleteCurrentUserAction, getCurrentUserRequestAction, setAdminAccessybility } from '../../store/slice';
+import { addDietRequestAction,  deleteCurrentUserAction, getCurrentUserRequestAction, setAdminAccessybility } from '../../store/slice';
 import { ADMIN_PASSWORD } from '../../Utils/constants';
 import './styles.css'
 
 export const SystemAdministrator: React.FC = () => {
     const [adminAccess, setAdminAccess] = useState<boolean>(true)
-    const [addUser, setAddUser] = useState<object>({})
     const [addDiet, setAddDiet] = useState<{id: string, count: number}>({id: '', count: 0})
     const [currentUser, setCurrentUser] = useState<{id: ''}>({id: ''})
     const [deleteUser, setDeleteUser] = useState<{id: string}>({id: "tortila1" })
@@ -22,12 +21,6 @@ export const SystemAdministrator: React.FC = () => {
         }
     }, [dispatch])
 
-    const addUserEvent = (e: ChangeEvent<HTMLInputElement>) => {
-        setAddUser({
-            ...addUser,
-            [e.target.name]: e.target.value
-        })
-    }
 
     const addDietEvent = (e: ChangeEvent<HTMLInputElement>) => {
         setAddDiet({
@@ -50,9 +43,6 @@ export const SystemAdministrator: React.FC = () => {
         })
     }
 
-    const createUser = () => {
-        dispatch(createNewUser(addUser,true))
-    }
     const addUserDiet = () => {
         const newDietParams = {
             dietId: addDiet.id,
@@ -77,44 +67,6 @@ export const SystemAdministrator: React.FC = () => {
             <div className='getAllContainer'>
                 <div className='getAll' onClick={getAllRequest}>
                     Get All
-                </div>
-            </div>
-            <div className='add_header'>
-                Create NEW User
-            </div>
-            <div className='admin_operations_containers'>
-                <div className='add_user_container'>
-                    <div className='add_block'>
-                        <label className='add_label'>Email</label>
-                        <input onChange={addUserEvent} className='add_input' type='text' name='email' />
-                    </div>
-                    <div className='add_block'>
-                        <label className='add_label'>Diet ID</label>
-                        <input onChange={addUserEvent} className='add_input' type='text' name='dietId' />
-                    </div>
-                    <div className='add_block'>
-                        <label className='add_label'>Date</label>
-                        <input onChange={addUserEvent} className='add_input' type='date' name='date' />
-                    </div>
-                </div>
-                <div className='add_user_container'>
-                <div className='add_block'>
-                        <label className='add_label'>Name</label>
-                        <input onChange={addUserEvent} className='add_input' type='text' name='name' />
-                    </div>
-                    <div className='add_block'>
-                        <label className='add_label'>Weight</label>
-                        <input onChange={addUserEvent} className='add_input' type='text' name='weight' />
-                    </div>
-                    <div className='add_block'>
-                        <label className='add_label'>Old</label>
-                        <input onChange={addUserEvent} className='add_input' type='number' name='old' />
-                    </div>
-                </div>
-            </div>
-            <div className='admin_button'>
-                <div onClick={createUser}>
-                    CREATE
                 </div>
             </div>
             <div className='add_header admin_operations_containers_add_role'>

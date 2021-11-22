@@ -28,6 +28,7 @@ const UserPage: React.FC = () => {
     const openGetNext = () => {
         dispatch(setGetNextModalStatus(true))
     }
+    
     return (
         <>
             <Header />

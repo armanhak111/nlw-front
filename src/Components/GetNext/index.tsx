@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Modal from "react-modal";
 import { useDispatch, useSelector } from 'react-redux';
 import { CurrentUser, GetNextModalOpanStatus } from '../../store/selector';
-import { setGetNextModalStatus } from '../../store/slice';
+import { addUserWeight, setGetNextModalStatus } from '../../store/slice';
 import { GetNext } from '../buttons/getquote';
 import './styles.css'
 
@@ -21,8 +21,8 @@ const GetNextModal: React.FC = () => {
         if(currentUser){
             setCurrentUserCredentials({
                 id: currentUser.dietId,
-                weight: Number(currentUser.weight.split(" ")[0]),
-                weightPoint: currentUser.weight.split(" ")[1]
+                weight: Number(currentUser.weight[0].split(" ")[0]),
+                weightPoint: currentUser.weight[0].split(" ")[1].toUpperCase()
             })
         }
     }, [currentUser])
@@ -35,7 +35,7 @@ const GetNextModal: React.FC = () => {
         if (weight) {
             setLose(currentUserCredetials.weight - weight)
         }
-    }, [weight,currentUserCredetials.weight])
+    }, [weight,currentUserCredetials?.weight])
 
 
     const getNextDiet = () => {
@@ -43,6 +43,11 @@ const GetNextModal: React.FC = () => {
             setError(true)
         } else {
             setError(false)
+            toggleModal()
+            dispatch(addUserWeight({
+                dietId: currentUser.dietId,
+                newWeight: `${weight} ${currentUser.weight[0].split(" ")[1]}`
+            }))
         }
     }
 
@@ -71,7 +76,7 @@ const GetNextModal: React.FC = () => {
                 <div className="d-flex">
                     <div className='kgelbcontainer modalKgPicker'>
                         <TextField
-                            label="Weight ( KG or LBS )"
+                            label="Current Weight ( KG or LBS )"
                             variant="standard"
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setWeight(e.target.value)}
                             value={weight}

@@ -101,14 +101,14 @@ export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdm
         }
         dispatch(setCurrentUser(response.data))
         if (history && window.location.pathname === '/profile' && response.data && !isAdmin) {
-          if(response.data.diets.length){
+          if (response.data.diets.length) {
             history.push(`/user/${response.data.dietId}`)
           }
         }
-        if(history && window.location.pathname !== '/profile' && response.data === null && !isAdmin){
+        if (history && window.location.pathname !== '/profile' && response.data === null && !isAdmin) {
           history.push('/')
         }
-        if(!response.data?.diets.length && window.location.pathname !== '/profile' ){
+        if (!response.data?.diets.length && window.location.pathname !== '/profile') {
           history.push('/')
         }
       }
@@ -149,6 +149,28 @@ export const addDietRequestAction = (data: { dietId?: string, count?: number }) 
           }
         ))
       }
+    })
+}
+
+
+export const addUserWeight = (data: { dietId: string, newWeight: string }) => (dispatch: any) => {
+  axios.put(`${api}/addWeight`, JSON.stringify(data), {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then((res) => {
+      if (res) {
+        dispatch(setModalOpenAction(
+          {
+            status: true,
+            type: ModalTypes.getNext,
+          }
+        ))
+      }
+    })
+    .catch((err) => {
+      console.log(err)
     })
 }
 

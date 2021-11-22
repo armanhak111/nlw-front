@@ -1,7 +1,8 @@
 export const ModalTypes = {
     error: 'error',
     success: 'success',
-    info: 'info'
+    info: 'info',
+    getNext: 'getNext'
 };
 
 export const CURRENT_WIGHT_POINT = {
