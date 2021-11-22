@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ModalTypes } from '../../Constants';
 import { modalOpenSelector } from '../../store/selector';
 import { setModalOpenAction } from '../../store/slice';
-import { SuccessModalComponent, ErrorModalComponent, InfoModalComponent } from './modal';
+import { SuccessModalComponent, ErrorModalComponent, InfoModalComponent, SuccessGetNextModal } from './modal';
 import './styles.css'
 
 interface ModalPropTypes {
@@ -18,6 +18,7 @@ export const ModalCreator: React.FC<ModalPropTypes> = ({ type }) => {
   const toggleModal = () => {
     dispatch(setModalOpenAction({}))
   }
+  console.log(modalOpen)
   return (
     <Modal
       isOpen={modalOpen.status}
@@ -38,7 +39,11 @@ export const ModalCreator: React.FC<ModalPropTypes> = ({ type }) => {
         )}
       {modalOpen.type === ModalTypes.info &&
         (
-          <InfoModalComponent childrenInfo={modalOpen.message}/>
+          <InfoModalComponent childrenInfo={modalOpen.message} />
+        )}
+      {modalOpen.type === ModalTypes.getNext &&
+        (
+          <SuccessGetNextModal />
         )}
     </Modal>
   )
