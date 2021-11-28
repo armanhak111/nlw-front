@@ -138,14 +138,14 @@ const GetQuoteComponent: React.FC = () => {
                     />
                     <div className='multipleIlnessSelect'>
                         <FormControl sx={{ m: 1, width: '100%' }}>
-                            <InputLabel id="demo-multiple-checkbox-label">Are You Have Any Illness?</InputLabel>
+                            <InputLabel id="demo-multiple-checkbox-label">Are You Have Any Diseases?</InputLabel>
                             <Select
                                 labelId="demo-multiple-checkbox-label"
                                 id="demo-multiple-checkbox"
                                 multiple
                                 value={ilness}
                                 onChange={handleIlness}
-                                input={<OutlinedInput label="Are You Have Any Illness?" />}
+                                input={<OutlinedInput label="Are You Have Any Diseases?" />}
                                 renderValue={(selected) => selected.join(', ')}
                                 MenuProps={MenuProps}
                             >
@@ -161,7 +161,7 @@ const GetQuoteComponent: React.FC = () => {
                     <div className="message getQuoteMessage">
                         <TextField
                             id="outlined-multiline-flexible"
-                            label="Any Health Problrms...  ?"
+                            label="Any Health Problems...  ?"
                             multiline
                             onChange={handleChange}
                             value={getQuote.message}

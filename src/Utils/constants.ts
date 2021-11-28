@@ -11,11 +11,12 @@ export const ADMIN_PASSWORD = 'tortila1111';
 export const DAYS: number[] = [1,2,3,4,5,6]
 
 export const ILNESS: string[] = [
-    'Oliver Hansen',
-    'Van Henry',
-    'April Tucker',
-    'Ralph Hubbard',
-    'Omar Alexander',
+    'Diabetes',
+    'Gastritis or stomach ulcer',
+    'Kidney disease',
+    'Vascular diseases',
+    'Oncological diseases',
+    'No any diseases'
 ];
 
 export const GET_QUOTE_VALUES_INITIAL = {
