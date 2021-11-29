@@ -20,15 +20,15 @@ const UserPage: React.FC = () => {
     const params: any = useParams()
 
     useEffect(() => {
-        if(!currentUser){
-            dispatch(getCurrentUserRequestAction(params?.dietId,history))
+        if (!currentUser) {
+            dispatch(getCurrentUserRequestAction(params?.dietId, history))
         }
-    },[currentUser,dispatch,history,params?.dietId])
+    }, [currentUser, dispatch, history, params?.dietId])
 
     const openGetNext = () => {
         dispatch(setGetNextModalStatus(true))
     }
-    
+
     return (
         <>
             <Header />
@@ -50,7 +50,7 @@ const UserPage: React.FC = () => {
                         <div className="startWeight">
                             <span>Start Weight:
                                 <span>
-                                    {currentUser?.weight}
+                                    {currentUser?.weight && currentUser?.weight[0]}
                                 </span>
                             </span>
                         </div>
@@ -68,9 +68,12 @@ const UserPage: React.FC = () => {
                                 Download
                             </div>
                         </div>
-                        <div onClick={openGetNext} className="getNextDown">
-                            <GetNext />
-                        </div>
+                        {currentUser?.diets && currentUser?.diets.length !== 4 &&
+                            (
+                                <div onClick={openGetNext} className="getNextDown">
+                                    <GetNext />
+                                </div>
+                            )}
                     </div>
                 </div>
                 <GetNextModal />

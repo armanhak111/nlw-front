@@ -2,6 +2,7 @@
 
 .dietPlansContainer{
     width: 481px;
+    position: relative;
     height: 553px; 
     background: #382D65;
     opacity: 1;
@@ -21,7 +22,6 @@
 .PaidDietConatiner{
     display: flex;
     justify-content:space-around ;
-    margin-top: 23px;
     background: rgba(49, 214, 224, 0.1)
 }
 .paidIcon{
@@ -87,4 +87,33 @@
 .getDietIcon:hover {
     color: #31D6E0 ;
     transition: 0.5s;
+}
+.disclaimor{
+    height: 34px;    
+    background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.64) 0.44%, rgba(49, 214, 224, 0.64) 99.61%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #F8F8F8;
+}
+.maxLosed{
+    height: 57px;
+    background: linear-gradient(94.18deg, rgba(63, 131, 233, 0.64) 0.44%, rgba(49, 214, 224, 0.64) 99.61%);
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 145.9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F8F8F8;
 }

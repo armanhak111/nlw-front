@@ -36,3 +36,17 @@ export const cantAccess = (name:string) => {
 }
 
 export const OPACITIES = ['1', '1','0.7', '0.5']
+
+
+export const filteredNumber = (currentUser:any, index:number) => {
+    const diet1 = currentUser.weight[index - 1]
+    const diet2 = currentUser.weight[index]
+    return `-  ${Number(diet1.substring(0, diet1.length - 3)) - Number(diet2.substring(0, diet2.length - 3))} ${currentUser.weight[0].split(" ")[1].toUpperCase()}`
+}
+
+export const totalLose = (currentUser:any) => {
+    const diet1 = currentUser.weight[0]
+    const diet2 = currentUser.weight[currentUser.weight.length - 1]
+    console.log(diet1,diet2)
+    return `${Number(diet1.substring(0, diet1.length - 3)) - Number(diet2.substring(0, diet2.length - 3))} ${currentUser.weight[0].split(" ")[1].toUpperCase()}`
+}

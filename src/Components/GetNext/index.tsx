@@ -21,7 +21,7 @@ const GetNextModal: React.FC = () => {
         if(currentUser){
             setCurrentUserCredentials({
                 id: currentUser.dietId,
-                weight: Number(currentUser.weight[0].split(" ")[0]),
+                weight: Number(currentUser.weight[currentUser.weight.length - 1].split(" ")[0]),
                 weightPoint: currentUser.weight[0].split(" ")[1].toUpperCase()
             })
         }
@@ -66,11 +66,8 @@ const GetNextModal: React.FC = () => {
                     Get Next
                 </div>
                 <div className="weekAndStartWeighy">
-                    <div className="currentModalWeek">
-                        1 Week
-                    </div>
-                    <div className="startWeightModl">
-                        Start Weight: <span>{currentUserCredetials?.weight} {currentUserCredetials?.weightPoint}</span>
+                     <div className="startWeightModl">
+                        Weight: <span>{currentUserCredetials?.weight} {currentUserCredetials?.weightPoint}</span>
                     </div>
                 </div>
                 <div className="d-flex">
