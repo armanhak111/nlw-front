@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
 .footer{
     display: flex;
     justify-content: space-around;
@@ -12,7 +14,7 @@
 .policy{
     margin-top: 25px;
     display: flex;
-    font-family: Roboto;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -27,10 +29,10 @@
 .sertificate {
     margin-top: 25px;
     display: flex;
-    font-family: Roboto;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: #FDFDFD;
     letter-spacing: 0.02em;
     padding-bottom: 15px;

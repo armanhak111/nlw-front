@@ -40,6 +40,19 @@
     .discoverNewMethodContainer{
         display: block;
     }
+    .form{
+        display: grid;
+        margin-top: 5px;
+    }
+    .message{
+        margin-top: 18px;
+    }
+    .contactUs{
+        height: 620px;
+    }
+    .textCustomField  > div > input {
+        width: 26em;
+    }
     .newMethodButton{
         margin-top: 25px;
     }
@@ -57,13 +70,30 @@
         width: 550px;
         height: 500.95px;
     }
+    .message{
+        display: flex;
+        justify-content: center;
+    }
+    .messageCustomField > div {
+        width: 300px;
+    }
   }
   @media screen and (max-width : 769px ) {
     .dietPlanImg{
         width: 350px;
         height: 350px;
     }
+    .credentials > div {
+        display: flex;
+        justify-content: center;
+    }
     .newMethodTextAndGet{
         padding: 10px;
+    }
+    .textCustomField  > div > input {
+        width: 18em;
+    }
+    .credentials {
+        width: 100%;
     }
   }

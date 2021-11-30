@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
 
 .contactUsMainContainer{
-    display: none;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
 }
 .contactUs{
-    width: 1168px;
+    width: 90%;
     height: 541px;
     background: rgba(34, 22, 81, 0.6);
     box-shadow: 0px 8px 38px rgba(0, 0, 0, 0.08);
@@ -101,7 +100,7 @@
 	background-color: #31D6E0;
 }
 .contatUsSubmit{
-    margin-top: 70px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 };

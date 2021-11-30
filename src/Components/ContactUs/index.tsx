@@ -3,6 +3,7 @@ import './styles.css'
 import TextField from '@mui/material/TextField';
 import { GetQuoteActiveButton } from '../buttons/getquote';
 import { EMAIl } from '../../Utils/validations';
+import { contactUsAction } from '../../store/slice';
 
 const defaultFields = {
     name: '',
@@ -21,8 +22,11 @@ const ContactUs: React.FC = () => {
     };
 
     const contactUs = () => {
+        console.log(contacts);
+        contactUsAction(contacts)
         const validEmail = EMAIl.test(String(contacts?.email).toLowerCase());
         if(validEmail){
+            
             console.log(validEmail);       
             setContacts(defaultFields) 
             setError(false)
@@ -62,7 +66,7 @@ const ContactUs: React.FC = () => {
                                 focused
                             />
                         </div>
-                        {error && <div className='emailMessage'>Please enter a valid Email</div>}
+                        {error && <div style={{color: 'rgba(231, 85, 120, 1)'}} className='emailMessage'>Please enter a valid Email</div>}
                     </div>
                     <div className="message">
                         <TextField

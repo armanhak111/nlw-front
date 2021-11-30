@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { ModalTypes } from "../Constants";
+import emailjs from 'emailjs-com';
+
+const EMAIL = {
+  serviceID: 'service_opzfsse',
+  contactUsTemplate: 'template_0321h1d',
+  userID: 'user_DTQGUpyxJpFpmN9A4YESX'
+}
 
 const initialState: MainSlice = {
   newDietID: "",
@@ -82,6 +89,12 @@ export const createNewUser = (data: any, idAdmin?: boolean) => (dispatch: any) =
         }
       }
     })
+}
+
+export const contactUsAction = (current:{name?:string,email?:string,message?:string}) => {
+  emailjs.send(EMAIL.serviceID,EMAIL.contactUsTemplate,current,EMAIL.userID)
+  .then(res => console.log(res))
+  .catch(err => console.log(err)); 
 }
 
 export const getCurrentUserRequestAction = (dietId: string, history?: any, isAdmin?: boolean) => (dispatch: any) => {

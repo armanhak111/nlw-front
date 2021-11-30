@@ -18,7 +18,7 @@ export const BurgerMenu: React.FC = () => {
                 dispatch(setContactUsBackRoute(true))
                 history.push('/')
             } else {
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+                window.scrollTo({ top: document.body.scrollHeight - document.body.scrollHeight / 4, behavior: 'smooth' })
             }
         }, 200)
     }

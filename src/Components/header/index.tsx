@@ -17,7 +17,8 @@ const Header: React.FC = () => {
             dispatch(setContactUsBackRoute(true))
             history.push('/')
         }else{
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+            console.log(document.body.scrollHeight)
+            window.scrollTo({ top: document.body.scrollHeight - document.body.scrollHeight / 3, behavior: 'smooth' })
         }
     }
     return (
