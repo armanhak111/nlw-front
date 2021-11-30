@@ -16,7 +16,7 @@ const MainPage: React.FC = () => {
     useEffect(() => {
         if(contactUs){
             setContactUsBackRoute(false)
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+            window.scrollTo({ top: document.body.scrollHeight - document.body.scrollHeight / 4, behavior: 'smooth' })
         }
     },[contactUs])
 

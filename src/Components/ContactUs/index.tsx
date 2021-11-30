@@ -22,11 +22,9 @@ const ContactUs: React.FC = () => {
     };
 
     const contactUs = () => {
-        console.log(contacts);
-        contactUsAction(contacts)
         const validEmail = EMAIl.test(String(contacts?.email).toLowerCase());
         if(validEmail){
-            
+            contactUsAction(contacts)
             console.log(validEmail);       
             setContacts(defaultFields) 
             setError(false)

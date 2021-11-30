@@ -83,6 +83,12 @@
         width: 350px;
         height: 350px;
     }
+    .newMethodHeader{
+        font-size: 49px;
+    }
+    .newMethodText {
+        font-size: 17px;
+    }
     .credentials > div {
         display: flex;
         justify-content: center;
