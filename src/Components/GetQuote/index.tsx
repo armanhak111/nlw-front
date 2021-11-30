@@ -78,9 +78,9 @@ const GetQuoteComponent: React.FC = () => {
     return (
         <div className='quote'>
             <div className="quoteText">
-                Get Quote
+                Get Diet
             </div>
-            <div className={'formmain'}>
+            <div style={{display: 'flex', justifyContent: 'center'}} className={'formmain'}>
                 <div className="getQuoteContainerForm">
                     <TextField
                         label="Name"

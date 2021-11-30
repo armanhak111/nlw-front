@@ -10,7 +10,7 @@ interface PropTypes {
 }
 export const GetQuoteActiveButton: React.FC<PropTypes> = ({text, style}) => {
     const loading = useSelector(LOADING)
-    const current = text || 'Get Quote'
+    const current = text || 'Get Diet'
     return (
         <div style={style} className={'getQuoteActive'}>
             <div className='currentItem'>
@@ -22,7 +22,7 @@ export const GetQuoteActiveButton: React.FC<PropTypes> = ({text, style}) => {
 }
 
 export const GetQuotePassiveButton: React.FC<PropTypes> = ({text}) => {
-    const current = text || 'Get Quote'
+    const current = text || 'Get Diet'
     return (
         <div className={'getQuotePassive'}>
             <div className='currentItem'>

@@ -5,8 +5,8 @@ import './styles.css'
 
 const AboutPayment:React.FC = () => {
     return (
-        <div className="aboutPaymentContainer">
-            <div className="aboutPayment">
+        <div style={{display: 'flex', justifyContent: 'center'}} className="aboutPaymentContainer">
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} className="aboutPayment">
                 We accept only cryptocurrency method of payment
             </div>
         </div>

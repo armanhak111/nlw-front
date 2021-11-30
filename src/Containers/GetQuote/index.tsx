@@ -8,7 +8,7 @@ const GetQuote: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="quoteContainer">
+            <div style={{display: 'flex', justifyContent: 'center'}} className="quoteContainer">
             <GetQuoteComponent />
             </div>
             <Footer />
