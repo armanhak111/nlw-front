@@ -52,3 +52,9 @@
         height: 580px;
     }
   }
+  @media screen and (max-width : 769px ) {
+    .vitaminImage > img{
+        width: 380px;
+        height: 380px;
+    }
+  }

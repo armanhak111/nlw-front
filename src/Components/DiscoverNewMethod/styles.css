@@ -58,3 +58,12 @@
         height: 500.95px;
     }
   }
+  @media screen and (max-width : 769px ) {
+    .dietPlanImg{
+        width: 350px;
+        height: 350px;
+    }
+    .newMethodTextAndGet{
+        padding: 10px;
+    }
+  }
