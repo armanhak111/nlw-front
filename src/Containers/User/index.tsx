@@ -11,7 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCurrentUserRequestAction, setGetNextModalStatus } from '../../store/slice';
 import { CurrentUser } from '../../store/selector';
 import { useHistory, useParams } from 'react-router';
-
+// @ts-ignore
+import DIET from '../../assets/diets/first.pdf'
 
 const UserPage: React.FC = () => {
     const dispatch = useDispatch()
@@ -27,6 +28,13 @@ const UserPage: React.FC = () => {
 
     const openGetNext = () => {
         dispatch(setGetNextModalStatus(true))
+    }
+
+    const downloadPDF = () => {
+        const a = document.createElement('a') as any
+        a.setAttribute('download','First Diet')
+        a.href = DIET
+        a.click()
     }
 
     return (
@@ -65,7 +73,7 @@ const UserPage: React.FC = () => {
                     </div>
                     <div className="downloadGetNextContainer">
                         <div className="download">
-                            <div className="donwloadIcon">
+                            <div className="donwloadIcon" onClick={downloadPDF}>
                                 <img src={DownloadIcon} alt='DownloadIcon' />
                             </div>
                             <div className="downloadText">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router';
 import { setContactUsBackRoute } from '../../store/slice';
@@ -10,6 +10,11 @@ export const BurgerMenu: React.FC = () => {
     const history = useHistory();
     const dispatch = useDispatch()
     const location = useLocation()
+    const [openSideBar, setOpenSideBar] = useState<boolean>(false)
+    const toggle = () => {
+        document.body.style.overflow = !openSideBar ? 'hidden' : 'auto'
+        setOpenSideBar(!openSideBar)
+    }
     const contacUs = () => {
         const togle = document.getElementById("menu__toggle")
         togle?.click()
@@ -24,7 +29,7 @@ export const BurgerMenu: React.FC = () => {
     }
     return (
         <div className="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
+            <input id="menu__toggle" type="checkbox" onChange={toggle} />
             <label className="menu__btn" htmlFor="menu__toggle">
                 <span></span>
             </label>

@@ -26,6 +26,7 @@ const Diet: React.FC = () => {
                             </p>
                         </div>
                     </div>
+                    
                 </div>
 
                 {DAYS.map((element: number) => {
