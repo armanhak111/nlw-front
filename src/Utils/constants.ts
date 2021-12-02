@@ -8,7 +8,7 @@ export const ROUTES = {
 
 export const ADMIN_PASSWORD = 'tortila1111';
 
-export const DAYS: number[] = [1,2,3,4,5,6]
+export const DAYS: number[] = [1,2,3,4,5,6,7]
 
 export const ILNESS: string[] = [
     'Diabetes',

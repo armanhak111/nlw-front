@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@100;400&display=swap');
 
 .userContainer{
-    width: 1400px;
+    width: 95%;
     height: 1000px;
     margin-top: 100px;
     background: rgba(34, 22, 81, 0.6);
@@ -84,7 +84,7 @@
     display: flex;
     justify-content: space-around;
     width: 43%;
-    padding: 49px 0px 0px 41px;
+    padding: 35px 0px 0px 31px;
 }
 .download{
     width: 214px;
@@ -124,3 +124,65 @@
     letter-spacing: 0.02em;
     color: #F8F8F8;
 }
+@media screen and (max-width : 1200px) {
+    .dietAndDietPlan{
+        display: grid;
+    }
+    .userContainer{
+        height: 100%;
+    }
+    .dietCurrenetWrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .downloadGetNextContainer{
+        margin-top: 25px;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .download{
+        margin-right: 19px;
+    }
+    .weekAndStartWeightContainer{
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    }
+    .userContainer{
+        width: 90%;
+    }
+  }
+  
+  @media screen and (max-width : 768px) {
+    .dietContainer{
+        width: 100%;
+    }
+    .dietWrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .downloadGetNextContainer{
+        display: grid;
+        grid-gap: 15px;
+    }
+    .dietPlansContainer {
+        width: 100%;
+    }
+    .maxLosed{
+        font-size: 23px;
+    }
+    .weekAndStartWeightContainer{
+        display: grid;
+        grid-gap: 10px;
+    }
+    .currentDietId{
+        display: block;
+    }
+    .startWeight{
+        margin-left: 0px;
+    }
+  }
+  

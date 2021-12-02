@@ -11,8 +11,8 @@
 }
 .dietPlansHeader{
     font-family: 'Poppins', sans-serif;
-    margin-top: 23px;
     margin-left: 40px;
+    padding: 23px;
     font-style: normal;
     font-weight: 500;
     font-size: 28px;

@@ -56,8 +56,12 @@ const UserPage: React.FC = () => {
                         </div>
                     </div>
                     <div className='dietAndDietPlan'>
+                        <div className='dietWrapper'>
                         <Diet />
+                        </div>
+                        <div className='dietCurrenetWrapper'>
                         <DietPlans currentUser={currentUser} />
+                        </div>
                     </div>
                     <div className="downloadGetNextContainer">
                         <div className="download">
