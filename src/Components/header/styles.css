@@ -72,7 +72,7 @@
   .menu__btn {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
   
@@ -80,7 +80,7 @@
     height: 26px;
   
     cursor: pointer;
-    z-index: 1;
+    z-index: 9999;
   }
   
   .menu__btn > span,
@@ -118,7 +118,7 @@
     list-style: none;  
     background: linear-gradient(165.6deg, #040329 0%, #030245 100.93%);
         box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-  
+  z-index: 999;
     transition-duration: .25s;
     
   }

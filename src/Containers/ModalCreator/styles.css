@@ -178,3 +178,23 @@
   letter-spacing: 0.02em;
   color: #F8F8F8;
 }
+@media screen and (max-width : 992px) {
+  .checkYourEmailText{
+      line-height: 25px;
+      margin-top: 28px;
+  }
+  .afterPaymentShowDietText{
+    text-align: center;
+  }
+  .generateUniquieIdText{
+    text-align: center;
+    margin-top: 23px;
+    line-height: 19px;
+  }
+  .secondaryButton{
+    margin-right: 3px;
+  }
+  .primaryButton{
+    margin-left: 3px;
+  }
+}

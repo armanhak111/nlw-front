@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router';
 import { setContactUsBackRoute } from '../../store/slice';
@@ -11,6 +11,11 @@ export const BurgerMenu: React.FC = () => {
     const dispatch = useDispatch()
     const location = useLocation()
     const [openSideBar, setOpenSideBar] = useState<boolean>(false)
+    useEffect(() => () => {
+        return document.body.style.overflow = 'auto' as any
+
+    }, [])
+    
     const toggle = () => {
         document.body.style.overflow = !openSideBar ? 'hidden' : 'auto'
         setOpenSideBar(!openSideBar)
