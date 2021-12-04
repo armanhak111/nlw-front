@@ -35,7 +35,7 @@ export const cantAccess = (name:string) => {
     return `Dear ${name}, you can go to your profile and see your diet only after payment`
 }
 
-export const OPACITIES = ['1', '1','0.7', '0.5']
+export const OPACITIES = ['1', '0.7','0.5', '0.3']
 
 
 export const filteredNumber = (currentUser:any, index:number) => {

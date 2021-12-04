@@ -6,6 +6,7 @@ import emailjs from 'emailjs-com';
 const EMAIL = {
   serviceID: 'service_opzfsse',
   contactUsTemplate: 'template_0321h1d',
+  userEmailTemplate: 'template_w7ppbr8',
   userID: 'user_DTQGUpyxJpFpmN9A4YESX'
 }
 
@@ -89,6 +90,20 @@ export const createNewUser = (data: any, idAdmin?: boolean) => (dispatch: any) =
         }
       }
     })
+}
+
+export const userDietEmail = (data:any) => {
+  axios.put(`${api}/crypto/bitcoin`)
+  .then((res) => {
+    emailjs.send(EMAIL.serviceID,EMAIL.userEmailTemplate,{
+      ...data,
+      bitcoin: res.data,
+      reply_to: data.email,
+      toEm: data.email,
+    },EMAIL.userID)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));     
+  })
 }
 
 export const contactUsAction = (current:{name?:string,email?:string,message?:string}) => {

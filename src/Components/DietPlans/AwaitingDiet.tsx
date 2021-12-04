@@ -15,13 +15,13 @@ export const AwaitingDiet:React.FC<IProps> = ({currentWeek, currentUser}) => {
         dispatch(setGetNextModalStatus(true))
 
     }
-    const currentWeekOpacity = currentUser?.weight ?  currentWeek - 1 - currentUser?.weight.length : 0
+    const currentWeekOpacity = currentUser?.diets ?  currentWeek - 1 - currentUser?.diets.length : 0
     return (
         <div className="awaitingDietContainer" style={{opacity : `${OPACITIES[currentWeekOpacity]}`}}>
             <div className="awaitingCurrentWeek">
                 {currentWeek} Week
             </div>
-            <div className="getDietIcon" onClick={getNext}>
+            <div className="getDietIcon" style={{pointerEvents: Number(OPACITIES[currentWeekOpacity]) < 1 ? 'none' : 'initial' }} onClick={getNext}>
                 Get
             </div>
         </div>

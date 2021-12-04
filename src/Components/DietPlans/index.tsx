@@ -32,7 +32,7 @@ const DietPlans: React.FC<{ currentUser: any }> = ({ currentUser }) => {
                     }
                 })}
             </div>
-            {currentUser?.weight && currentUser?.weight.length > 1 &&
+            {currentUser?.weight && currentUser?.diets.length > 1 &&
                 (
                     <div className='maxLosed'>
                         Total Losed: {totalLose(currentUser)}

@@ -12,7 +12,7 @@ import { EMAIL_INVALID, GET_QUOTE_VALUES_INITIAL, ILNESS, PLEASE_FILL } from '..
 import { CURRENT_WIGHT_POINT, ModalTypes } from '../../Constants';
 import { EMAIl } from '../../Utils/validations';
 import { useDispatch } from 'react-redux';
-import { createNewUser, setModalOpenAction } from '../../store/slice';
+import { createNewUser, setModalOpenAction, userDietEmail } from '../../store/slice';
 import { v1 as uuidv1 } from 'uuid';
 
 const ITEM_HEIGHT = 48;
@@ -50,6 +50,7 @@ const GetQuoteComponent: React.FC = () => {
     }
 
     const handleSubmit = () => {
+        const currentNewDietId:string = uuidv1();
         if (!getQuote.name || !getQuote.email || !getQuote.weight || !getQuote.old) {
            return setError(PLEASE_FILL)
         } 
@@ -65,9 +66,17 @@ const GetQuoteComponent: React.FC = () => {
           ))
           setError('');
           setGetQuote(GET_QUOTE_VALUES_INITIAL)
+          userDietEmail({
+            email: getQuote.email,
+            dietId: currentNewDietId,
+            date: new Date().toISOString().split('T')[0],
+            name: getQuote.name,
+            weight: `${getQuote.weight} ${currentWeightNaming}`,
+            old: Number(getQuote.old)
+        })
           dispatch(createNewUser({
             email: getQuote.email,
-            dietId: uuidv1(),
+            dietId: currentNewDietId,
             date: new Date().toISOString().split('T')[0],
             name: getQuote.name,
             weight: `${getQuote.weight} ${currentWeightNaming}`,
