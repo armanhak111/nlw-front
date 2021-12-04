@@ -103,10 +103,14 @@
   
   @media screen and (max-width : 768px) {
     .profile  {
-      width: 95% !important;
+      width: 93% !important;
     }
     .customDietField > div > input {
         width: 23em !important;
+    }
+    .dietIdField{
+        width: 90%;
+        margin-left: 13px;
     }
   }
   

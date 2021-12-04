@@ -180,7 +180,7 @@
 }
 @media screen and (max-width : 992px) {
   .checkYourEmailText{
-      line-height: 25px;
+      line-height: 32px;
       margin-top: 28px;
   }
   .afterPaymentShowDietText{
@@ -189,7 +189,10 @@
   .generateUniquieIdText{
     text-align: center;
     margin-top: 23px;
-    line-height: 19px;
+    line-height: 30px;
+  }
+  .generateUniquieIdText::after{
+    top: 57px !important;
   }
   .secondaryButton{
     margin-right: 3px;
