@@ -138,7 +138,7 @@ const GetQuoteComponent: React.FC = () => {
                     />
                     <div className='multipleIlnessSelect'>
                         <FormControl sx={{ m: 1, width: '100%' }}>
-                            <InputLabel id="demo-multiple-checkbox-label">Are You Have Any Diseases?</InputLabel>
+                            <InputLabel id="demo-multiple-checkbox-label">Do You Have Any Diseases?</InputLabel>
                             <Select
                                 labelId="demo-multiple-checkbox-label"
                                 id="demo-multiple-checkbox"

@@ -32,7 +32,7 @@ export const EMAIL_INVALID = 'Email is not valid'
 export const ID_INVALID = 'Please enter a valid Diet ID'
 export const USER_CANT_FIND = 'User not found with this Diet ID'
 export const cantAccess = (name:string) => {
-    return `Dear ${name}, you can go to your profile and see your diets only after payment`
+    return `Dear ${name}, you can go to your profile and see your diet only after payment`
 }
 
 export const OPACITIES = ['1', '1','0.7', '0.5']

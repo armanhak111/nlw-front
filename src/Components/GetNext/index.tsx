@@ -99,7 +99,7 @@ const GetNextModal: React.FC = () => {
                 {typeof lose === 'number' && String(weight).length > 1 &&
                     (
                         <div className="howYouLose">
-                            You Lose: <span>{lose} {currentUserCredetials?.weightPoint}</span>
+                            You have lost: <span>{lose} {currentUserCredetials?.weightPoint}</span>
                         </div>
                     )}
                 <div onClick={getNextDiet} className="getNextModalButton d-flex">
