@@ -87,6 +87,7 @@
 }
 .errorMessageProfile{
     margin-top: 10px;
+    padding: 5px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
